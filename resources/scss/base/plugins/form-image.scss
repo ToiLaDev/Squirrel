@@ -1,0 +1,78 @@
+.form-image {
+    padding: 0;
+    margin: 0;
+    &:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+    li {
+        list-style: none;
+        float: left;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        border: solid #fff 3px;
+        background-color: #fff;
+        width: 128px;
+        height: 128px;
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+        >span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed #dcdee3;
+            top: 0;
+            cursor: pointer;
+            .fa {
+                position: absolute;
+                top: calc(50% - 10px);
+                left: calc(50% - 10px);
+                font-size: 20px;
+                color: #dcdee3;
+            }
+        }
+        >div {
+            display: block;
+            border: 1px solid rgba(0, 0, 0, .1);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+            >img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 105%;
+                width: auto;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+        >.fa-times {
+            position: absolute;
+            right: 5px;
+            top: 2px;
+            z-index: 1;
+            font-size: 16px;
+            color: #e84040;
+            cursor: pointer;
+            display: none;
+        }
+        &:hover {
+            >.fa-times {
+                display: inline-block;
+            }
+        }
+    }
+}
