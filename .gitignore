@@ -26,5 +26,6 @@ Homestead.json
 .idea/
 .editorconfig
 
-
+composer.json
 public/*/
+composer.lock
