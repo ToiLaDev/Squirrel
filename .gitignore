@@ -29,3 +29,6 @@ Homestead.json
 composer.json
 public/*/
 composer.lock
+package-lock.json
+composer.json
+composer.json

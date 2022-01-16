@@ -4,7 +4,7 @@
 @section('content')
     <!-- Not authorized-->
     <div class="misc-wrapper">
-        <a class="brand-logo" href="{{ route('home') }}">
+        <a class="brand-logo" href="/">
             <x-images.logo />
             <h2 class="brand-text text-primary">{{ config('app.name') }}</h2>
         </a>
