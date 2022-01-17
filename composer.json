@@ -71,5 +71,15 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-menu.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-page.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-blog.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-comment.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-LMS.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-1vs1.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-1vs3.git"},
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-OpenClass.git"}
+    ]
 }
