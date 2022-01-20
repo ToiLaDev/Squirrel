@@ -242,16 +242,27 @@ class BaseDataTable extends DataTable
             'format' => 'Y-m-d H:i:s'
         ], $data);
 
-        $return = '{!!';
+        $return = '';
         switch ($data['type']) {
             case 'date':
-                $return .= "Date::parse(\${$data['name']})->tz(config('app.timezone'))->format(__('{$data['format']}'))";
+                $return = "{{Date::parse(\${$data['name']})->tz(config('app.timezone'))->format(__('{$data['format']}'))}}";
                 break;
             case 'number':
-                $return .= "number_format(\${$data['name']})";
+                $return = "{{number_format(\${$data['name']})}}";
+                break;
+            case 'id':
+                $return = "<a class=\"font-weight-bold\" href=\"javascript:void(0);\">#{{ \$id }}</a>";
+                break;
+            case 'image':
+                $return = "<div class=\"ratio ratio-16x9\"><div class=\"bg-cover rounded\" style=\"background-image: url('{{ \${$data['name']} }}')\"></div></div>";
+                break;
+            case 'action':
+                $return = "Admin::datatable.action";
+                break;
+            case 'acast':
+                $return = "Admin::datatable.action-cast";
                 break;
         }
-        $return .= '!!}';
         return $return;
     }
 }
