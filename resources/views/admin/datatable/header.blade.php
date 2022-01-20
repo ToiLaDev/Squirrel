@@ -15,4 +15,25 @@
 ])
 @push('page-scripts')
     {{$dataTable->scripts()}}
+@isset($filters)
+    <script type="text/javascript">
+        $(function () {
+            $('.dt_adv_search').on('submit', function (event) {
+                event.preventDefault();
+                var inputElms = $(this).find('.dt-input');
+                inputElms.each(function () {
+                    var colIndex = $(this).data('column-index'),
+                        seachVal = $(this).val()
+                    ;
+                    window.LaravelDataTables["{{ $dataTableId }}"].column(colIndex).search(seachVal, false, true);
+
+                });
+                window.LaravelDataTables["{{ $dataTableId }}"].draw();
+            });
+            $('.dt_adv_search').on('reset', function (event) {
+                window.LaravelDataTables["{{ $dataTableId }}"].columns().search('').draw();
+            });
+        });
+    </script>
+    @endisset
 @endpush

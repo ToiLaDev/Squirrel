@@ -53,12 +53,24 @@
         <div class="modal-content"></div>
     </div>
 </div>
+<div class="modal fade modal-danger text-start" id="modalPlayer" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
 {{-- include default scripts --}}
 <script>
 </script>
 @include('panels.scripts')
 <script type="text/javascript">
     $(function() {
+        const modalPlayer = new bootstrap.Modal(document.getElementById('modalPlayer'));
         if (feather) {
             feather.replace({ width: 14, height: 14 });
         }
@@ -92,6 +104,25 @@
                     });
                 });
             }
+        });
+        $(document).on('click', '.item-video', function (e) {
+            const video = $(this).data('video');
+            const title = $(this).data('title');
+            $('#modalPlayer .modal-title').text(title??'{{__('Player')}}');
+            $('#modalPlayer .modal-body').html(`<video width="100%" autoplay controls><source src="${video}" type="video/mp4"></video>`);
+            modalPlayer.show();
+        });
+        document.getElementById('modalPlayer').addEventListener('hide.bs.modal', function (event) {
+            $('#modalPlayer .modal-body').html('');
+        });
+
+        $(document).on('click', '.item-document', function (e) {
+            const document = $(this).data('document');
+            $('#fullModal .modal-content').html(`<iframe style="width: 100%;height: 100%;" src="https://docs.google.com/gview?url=${document}&embedded=true"></iframe><div style="position: absolute;bottom:10px;right:10px;"><button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">{{ __('Close') }}</button><button type="button" class="btn ms-1 btn-sm btn-success">{{ __('Reload') }}</button></div>`);
+            fullModal.show();
+        });
+        document.getElementById('fullModal').addEventListener('hide.bs.modal', function (event) {
+            $('#fullModal .modal-content').html('');
         });
         @if (session('toast'))
         showToast({!! json_encode(session('toast')) !!})

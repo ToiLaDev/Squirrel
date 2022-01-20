@@ -14,7 +14,7 @@ return [
         /*
          * Multi-term search will explode search keyword using spaces resulting into multiple term search.
          */
-        'multi_term'       => true,
+        'multi_term'       => false,
 
         /*
          * Case insensitive will search the keyword in lower case format.
