@@ -94,6 +94,20 @@ class Input extends Component
     public $slug;
 
     /**
+     * The Input class.
+     *
+     * @var string
+     */
+    public $class;
+
+    /**
+     * The Input datas.
+     *
+     * @var array
+     */
+    public $datas;
+
+    /**
      * The Input disabled.
      *
      * @var boolean
@@ -121,6 +135,8 @@ class Input extends Component
         $value = null,
         $prefixId = 'input',
         $containerClass = 'mb-2',
+        $class = null,
+        $datas = null,
         $layout = 'vertical',
         $col = [3,9],
         $fill = null,
@@ -141,6 +157,8 @@ class Input extends Component
         $this->containerClass = $fill['containerClass']??$containerClass;
         $this->same = $fill['same']??$same;
         $this->slug = $fill['slug']??$slug;
+        $this->class = $fill['class']??$class;
+        $this->datas = $fill['datas']??$datas;
         $this->disabled = $fill['disabled']??$disabled;
         $this->required = $fill['required']??$required;
         if ($this->layout == 'horizontal') {

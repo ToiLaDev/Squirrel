@@ -10,13 +10,17 @@
         <select
             id="{{$prefixId}}-{{$name}}"
             name="{{$name}}{{$multiple?'[]':''}}"
-            class="form-select @error($name) is-invalid @enderror"
+            class="form-select {{ $class }} @error($name) is-invalid @enderror"
             @if($disabled)
             disabled
             @endif
             @if($multiple)
             multiple
             @endif
+            @if(is_array($datas))
+            @foreach($datas as $key => $val)
+            data-{{$key}}="{{$val}}"
+            @endforeach
         >
             @if($slot->isEmpty())
             @isset($default)

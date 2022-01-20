@@ -86,6 +86,20 @@ class Select extends Component
     public $default;
 
     /**
+     * The Select class.
+     *
+     * @var string
+     */
+    public $class;
+
+    /**
+     * The Select datas.
+     *
+     * @var array
+     */
+    public $datas;
+
+    /**
      * Create a new component instance.
      *
      * @return void
@@ -97,6 +111,8 @@ class Select extends Component
         $value = null,
         $prefixId = 'input',
         $containerClass = 'mb-2',
+        $class = null,
+        $datas = null,
         $layout = 'vertical',
         $col = [3,9],
         $fill = null,
@@ -115,6 +131,8 @@ class Select extends Component
         $this->disabled = $fill['disabled']??$disabled;
         $this->multiple = $fill['multiple']??$multiple;
         $this->default = $fill['default']??$default;
+        $this->class = $fill['class']??$class;
+        $this->datas = $fill['datas']??$datas;
         if ($this->layout == 'horizontal') {
             $this->containerClass .= ' row';
             if (isset($fill['col'])) {

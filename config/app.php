@@ -195,7 +195,7 @@ return [
 //
 //        Spatie\Permission\PermissionServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
-//        ToiLaDev\Flysystem\Backblaze\ServiceProvider::class,
+        ToiLaDev\Flysystem\Backblaze\ServiceProvider::class,
 
     ],
 

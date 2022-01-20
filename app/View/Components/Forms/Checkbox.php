@@ -72,6 +72,20 @@ class Checkbox extends Component
     public $multiple;
 
     /**
+     * The Checkbox class.
+     *
+     * @var string
+     */
+    public $class;
+
+    /**
+     * The Checkbox datas.
+     *
+     * @var array
+     */
+    public $datas;
+
+    /**
      * Create a new component instance.
      *
      * @return void
@@ -82,6 +96,8 @@ class Checkbox extends Component
         $value = null,
         $prefixId = 'input',
         $containerClass = 'mb-2',
+        $class = null,
+        $datas = null,
         $layout = 'vertical',
         $col = [3,9],
         $fill = null,
@@ -97,6 +113,8 @@ class Checkbox extends Component
         $this->containerClass = $fill['containerClass']??$containerClass;
         $this->disabled = $fill['disabled']??$disabled;
         $this->multiple = $fill['multiple']??$multiple;
+        $this->class = $fill['class']??$class;
+        $this->datas = $fill['datas']??$datas;
         if ($this->layout == 'horizontal') {
             $this->containerClass .= ' row';
             if (isset($fill['col'])) {

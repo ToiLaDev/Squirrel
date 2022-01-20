@@ -81,6 +81,20 @@ class Textarea extends Component
     public $required;
 
     /**
+     * The Textarea class.
+     *
+     * @var string
+     */
+    public $class;
+
+    /**
+     * The Textarea datas.
+     *
+     * @var array
+     */
+    public $datas;
+
+    /**
      * Create a new component instance.
      *
      * @return void
@@ -92,6 +106,8 @@ class Textarea extends Component
         $prefixId = 'input',
         $placeholder = null,
         $containerClass = 'mb-2',
+        $class = null,
+        $datas = null,
         $layout = 'vertical',
         $col = [3,9],
         $fill = null,
@@ -108,6 +124,8 @@ class Textarea extends Component
         $this->containerClass = $fill['containerClass']??$containerClass;
         $this->disabled = $fill['disabled']??$disabled;
         $this->required = $fill['required']??$required;
+        $this->class = $fill['class']??$class;
+        $this->datas = $fill['datas']??$datas;
         if ($this->layout == 'horizontal') {
             $this->containerClass .= ' row';
             if (isset($fill['col'])) {

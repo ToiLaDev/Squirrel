@@ -67,7 +67,7 @@
             type="{{$type}}"
             id="{{$prefixId}}-{{$name}}"
             name="{{$name}}"
-            class="form-control @error($name) is-invalid @enderror @if(in_array($type, ['date', 'datetime'])) flatpickr @endif"
+            class="form-control {{ $class }} @error($name) is-invalid @enderror @if(in_array($type, ['date', 'datetime'])) flatpickr @endif"
             @isset($placeholder)
             placeholder="{{ $placeholder }}"
             @endisset
@@ -80,6 +80,11 @@
             @endif
             @if($required)
                 required
+            @endif
+            @if(is_array($datas))
+            @foreach($datas as $key => $val)
+            data-{{$key}}="{{$val}}"
+            @endforeach
             @endif
         />
     @isset($icon)
