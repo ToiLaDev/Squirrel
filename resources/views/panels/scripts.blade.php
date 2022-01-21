@@ -34,7 +34,7 @@
 
     const confirmAction = (callback, text, title) => {
         if (text === undefined) {
-            text = `{!! __('You won\'t be able to revert this!') !!}`;
+            text = `{!! __('Maybe You won\'t be able to revert this!') !!}`;
         }
         if (title === undefined) {
             title = `{!! __('Are you sure?') !!}`;

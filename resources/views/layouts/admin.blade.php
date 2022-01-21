@@ -105,6 +105,26 @@
                 });
             }
         });
+
+        $(document).on('change', '.item-switch', function (e) {
+            const checked = $(e.target).is(':checked');
+            const action = $(e.target).data('action');
+            $(e.target).prop('checked', !checked);
+            confirmAction(function (){
+                $.ajax({
+                    url: action,
+                    type: 'PUT',
+                    data: {
+                        value: checked
+                    },
+                    dataType: 'json',
+                    success: function () {
+                        $(e.target).prop('checked', checked);
+                    }
+                });
+            });
+        });
+
         $(document).on('click', '.item-video', function (e) {
             const video = $(this).data('video');
             const title = $(this).data('title');

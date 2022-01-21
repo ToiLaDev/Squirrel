@@ -12,5 +12,11 @@
     asset(mix('css/base/plugins/extensions/ext-component-sweet-alerts.css')),
     asset(mix('css/base/plugins/extensions/ext-component-toastr.css'))
 ])
+<style>
+    .avatar [class*=avatar-status-] {
+        width: 30% !important;
+        height: 30% !important;
+    }
+</style>
 @styles('page')
 @stack('page-styles')
