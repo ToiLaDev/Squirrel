@@ -85,7 +85,9 @@
                 itemId = $(this).parents('.item-actions').data('id'),
                 itemUrl = $(this).data('url');
             if ($(this).hasClass('item-view')) {
-                window.location.href = itemUrl??`${window.location.href}/${itemId}`;
+                const view = itemUrl??`${window.location.href}/${itemId}`;
+                $('#fullModal .modal-content').html(`<iframe style="width: 100%;height: 100%;" src="${view}"></iframe><div style="position: absolute;bottom:10px;right:10px;"><button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">{{ __('Close') }}</button><button type="button" class="btn ms-1 btn-sm btn-success">{{ __('Reload') }}</button></div>`);
+                fullModal.show();
             } else if($(this).hasClass('item-preview')) {
                 const preview = $(this).data('preview');
                 $('#fullModal .modal-content').html(`<iframe style="width: 100%;height: 100%;" src="${preview}"></iframe><div style="position: absolute;bottom:10px;right:10px;"><button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">{{ __('Close') }}</button><button type="button" class="btn ms-1 btn-sm btn-success">{{ __('Reload') }}</button></div>`);
