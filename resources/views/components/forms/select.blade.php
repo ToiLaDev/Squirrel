@@ -21,27 +21,28 @@
             @foreach($datas as $key => $val)
             data-{{$key}}="{{$val}}"
             @endforeach
+            @endif
         >
             @if($slot->isEmpty())
-            @isset($default)
-                <option value="">{{ __($default) }}</option>
-            @endisset
-            @foreach($options as $option)
-                @php
-                    if (is_string($option)) {
-                        $option = [
-                            'title' => ucfirst($option),
-                            'value' => $option
-                        ];
-                    }
-                @endphp
-                <option
-                    value="{{$option['value']}}"
-                    @if($multiple?in_array($option['value'], $value):$value === $option['value'])
-                        selected
-                    @endif
-                >{{$option['title']}}</option>
-            @endforeach
+                @isset($default)
+                    <option value="">{{ __($default) }}</option>
+                @endisset
+                @foreach($options as $option)
+                    @php
+                        if (is_string($option)) {
+                            $option = [
+                                'title' => ucfirst($option),
+                                'value' => $option
+                            ];
+                        }
+                    @endphp
+                    <option
+                        value="{{$option['value']}}"
+                        @if($multiple?in_array($option['value'], $value):$value === $option['value'])
+                            selected
+                        @endif
+                    >{{$option['title']}}</option>
+                @endforeach
             @else
                 {!! $slot !!}
             @endif
