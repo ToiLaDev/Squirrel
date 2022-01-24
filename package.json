@@ -14,13 +14,13 @@
         "axios": "^0.21",
         "cross-env": "^5.2.1",
         "jquery": "^3.6",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.41",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
         "postcss": "^8.1.14",
-        "resolve-url-loader": "^4.0.0",
+        "resolve-url-loader": "^5.0.0",
         "rtlcss": "^3.0",
-        "sass": "1.30.0",
-        "sass-loader": "^11.0.1"
+        "sass": "^1.30.0",
+        "sass-loader": "^12.1.0"
     }
 }
