@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-outline-{{$name}}" data-bs-toggle="modal" data-bs-target="#{{$value}}">{{$title}}</button>
-<div class="modal fade text-start" id="default" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+<div class="modal fade text-start" id="{{$value}}" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
