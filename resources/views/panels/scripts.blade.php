@@ -10,7 +10,8 @@
 <script src="{{asset(mix('js/core/app.js'))}}" ></script>
 @scripts('page')
 <script type="text/javascript">
-    var isRtl = $('html').data('textdirection') === 'rtl';
+    const textDirection =  $('html').data('textdirection');
+    const isRtl = textDirection === 'rtl';
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

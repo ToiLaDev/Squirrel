@@ -5,6 +5,7 @@ use \Illuminate\Contracts\View\View as ViewImpl;
 use \Illuminate\Support\Facades\View;
 use \App\Services\ActivityHelper;
 use \App\Facades\Widget;
+use \Illuminate\Support\Facades\Date;
 
 if (!function_exists('baseView')) {
     function baseView($view, $datas = []): ViewImpl
@@ -143,6 +144,26 @@ if (!function_exists('isActive')) {
     }
 }
 
+if (!function_exists('datetimeBlade')) {
+    function datetimeBlade($value): string
+    {
+        return "<?php echo datetime_format({$value}); ?>";
+    }
+}
+
+if (!function_exists('datetime_format')) {
+    function datetime_format($datetime = null, $format = 'Y-m-d H:i:s', $tz = null)
+    {
+        if ($tz === null) $tz = config('app.timezone');
+        if ($datetime === null) {
+            $datetime = Date::now();
+        } elseif (is_string($datetime)) {
+            $datetime = Date::parse($datetime);
+        }
+        return $datetime->tz($tz)->format(__($format));
+    }
+}
+
 if (!function_exists('name2Title')) {
     function name2Title($name): string
     {
@@ -203,5 +224,15 @@ if (!function_exists('is_true')) {
     {
         $boolval = ( is_string($val) ? filter_var($val, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) : (bool) $val );
         return ( $boolval===null && !$return_null ? false : $boolval );
+    }
+}
+if (!function_exists('kilo_format')) {
+    function kilo_format($number, $symbol = 'K', $decimal_separator = ',')
+    {
+        if ($number < 1000) {
+            return number_format($number, 0, $decimal_separator);
+        } else {
+            return number_format($number/1000, 0, $decimal_separator).$symbol;
+        }
     }
 }

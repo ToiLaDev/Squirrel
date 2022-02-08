@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-left align-items-center">
     <div class="avatar-wrapper">
-        <div class="avatar  me-1">
+        <div class="avatar">
             <img src="{{$avatar}}" alt="Avatar" height="32" width="32">
         </div>
     </div>

@@ -148,10 +148,21 @@ class BaseDataTable extends DataTable
         $columns = [];
         $index = 0;
         foreach ($this->columns as $name => $column) {
+            if (isset($column['raw']['type']) && in_array($column['raw']['type'], ['action', 'acast'])) {
+                if (empty($column['width'])) {
+                    $column['width'] = 80;
+                }
+                if (empty($column['addClass'])) {
+                    $column['addClass'] = 'text-center';
+                }
+            }
+
             $col = Column::make($name);
 
             if (isset($column['data'])) {
                 $col = $col->data($column['data']);
+            } elseif(isset($column['raw'])) {
+                $col = $col->data("_{$name}");
             }
             if (isset($column['search'])) {
                 $col = $col->searchable($column['search']);
@@ -224,7 +235,7 @@ class BaseDataTable extends DataTable
 
         foreach ($this->columns as $name => $column) {
             if (isset($column['raw'])) {
-                $columns[$column['data']??$name] = $column['raw'];
+                $columns[$column['data']??"_{$name}"] = is_array($column['raw'])?array_merge(['name'=>$name], $column['raw']):$column['raw'];
             }
         }
 
@@ -242,19 +253,30 @@ class BaseDataTable extends DataTable
             'format' => 'Y-m-d H:i:s'
         ], $data);
 
+        if (Str::contains($data['name'], '.')) {
+            $splitName = explode('.', $data['name']);
+            $rawName = "\${$splitName[0]}";
+            for ($i=1; $i< count($splitName); $i++) {
+                $rawName .= "['{$splitName[$i]}']";
+            }
+        } else {
+            $rawName = "\${$data['name']}";
+        }
+
         $return = '';
+
         switch ($data['type']) {
             case 'date':
-                $return = "{{Date::parse(\${$data['name']})->tz(config('app.timezone'))->format(__('{$data['format']}'))}}";
+                $return = "{{datetime_format({$rawName}, '{$data['format']}')}}";//"{{Date::parse(\${$data['name']})->tz(config('app.timezone'))->format(__('{$data['format']}'))}}";
                 break;
             case 'number':
-                $return = "{{number_format(\${$data['name']})}}";
+                $return = "{{number_format({$rawName})}}";
                 break;
             case 'id':
                 $return = "<a class=\"font-weight-bold\" href=\"javascript:void(0);\">#{{ \$id }}</a>";
                 break;
             case 'image':
-                $return = "<div class=\"ratio ratio-16x9\"><div class=\"bg-cover rounded\" style=\"background-image: url('{{ \${$data['name']} }}')\"></div></div>";
+                $return = "<div class=\"ratio ratio-16x9\"><div class=\"bg-cover rounded\" style=\"background-image: url('{{ {$rawName} }}')\"></div></div>";
                 break;
             case 'action':
                 $return = "Admin::datatable.action";

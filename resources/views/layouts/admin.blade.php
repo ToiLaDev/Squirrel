@@ -49,8 +49,16 @@
 {{-- include footer --}}
 @include('panels.footer')
 <div class="modal fade" id="fullModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content"></div>
+    <div class="modal-dialog modal-fullscreen bg-white">
+        <div class="position-absolute start-0 top-0 bottom-0 end-0 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="spinner-border" style="width: 3rem; height: 3rem" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <span class="font-medium-4"> {{__('Loading...')}}</span>
+            </div>
+        </div>
+        <div class="modal-content bg-transparent"></div>
     </div>
 </div>
 <div class="modal fade modal-danger text-start" id="modalPlayer" aria-modal="true" role="dialog">
@@ -78,6 +86,7 @@
         const fullModal = new bootstrap.Modal(document.getElementById('fullModal'));
 
         $(document).on('click', '#fullModal .modal-content .btn-success', function (e) {
+            $('#fullModal .modal-content').hide();
             $('#fullModal iframe')[0].contentWindow.location.reload(true);
         });
         $(document).on('click', '.dataTable .item-actions .btn', function (e) {
@@ -142,6 +151,11 @@
             const document = $(this).data('document');
             $('#fullModal .modal-content').html(`<iframe style="width: 100%;height: 100%;" src="https://docs.google.com/gview?url=${document}&embedded=true"></iframe><div style="position: absolute;bottom:10px;right:10px;"><button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">{{ __('Close') }}</button><button type="button" class="btn ms-1 btn-sm btn-success">{{ __('Reload') }}</button></div>`);
             fullModal.show();
+        });
+        document.getElementById('fullModal').addEventListener('show.bs.modal', function (event) {
+            $('#fullModal iframe').on('load', function(){
+                $('#fullModal .modal-content').show();
+            });
         });
         document.getElementById('fullModal').addEventListener('hide.bs.modal', function (event) {
             $('#fullModal .modal-content').html('');

@@ -17,6 +17,9 @@
         width: 30% !important;
         height: 30% !important;
     }
+    .avatar-wrapper {
+        margin-right: 0.5em;
+    }
 </style>
 @styles('page')
 @stack('page-styles')

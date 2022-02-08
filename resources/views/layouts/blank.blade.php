@@ -19,8 +19,16 @@
     {{-- Include core + vendor Styles --}}
     @include('panels.styles')
 </head>
-<body>
-@yield('content')
+<body
+      data-framework="laravel"
+      data-asset-path="{{ asset('/')}}">
+<div class="content ms-0">
+    <div class="content-wrapper ">
+        <div class="content-body">
+            @yield('content')
+        </div>
+    </div>
+</div>
 <!-- End: Content-->
 {{-- include default scripts --}}
 @include('panels.scripts')
@@ -29,6 +37,12 @@
         if (feather) {
             feather.replace({ width: 14, height: 14 });
         }
+
+        $('body').tooltip({selector: '[data-toggle="tooltip"]'});
+
+        @if (session('toast'))
+        showToast({!! json_encode(session('toast')) !!})
+        @endif
     });
 </script>
 </body>

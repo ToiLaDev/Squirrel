@@ -1,117 +1,166 @@
 <?php
 
-\Toiladev\Loader::ex(
-<<<EOF
-3XfxPQgFZ5Uq9eBPOy82cTMyoVAB0hRAXHg4Qrxq76dzKdEJdrf6xTRPEZNOfpSaGmz2b4pqfbS
-DVDM2fkpacS+jMcSLFCkV8ZX10oTbiWCcQ//u+r6dofjtz+1UOg8QDagZvELXVVrKzYw4vG0gP2
-U7R/1rLVZYqlXAkaN8EUYw/Cg1DqpIy57myCZzR4+ZqaESOo3jxhIDEvHf8/ZHgafTCI2PltwvC
-eKRVwse1yJlVtMZmhgP8OG5ochuFpSnFQnuQmfCi84MEfdE0qbqBW0Ou3wHkC63Z3v563g0rEML
-mDr+E+KWcDVALHgj3Y5LCifvO5wjxHrsP9qYEgdy9SpbTcuMo0PKio5EvvFYXz3Ft6pU51fyyR/
-H3+2/Q2dxyPhKBfX1pz7c7yat0dq1gEuwB3TDFt8DPdynzanCbYWOcFetGW46M/zUAsFf4uHMkC
-ySllfpTn6mBscjdToVIStorpRtBC3XG3mTYHOjD8SaTAkGaoIe4sMPACSH8xy/nk8wRj1huKK5N
-gHzj2ndGtYdhdJk7qPhRl2Jp+Y9nywZ9nJIB9W1yIO7dELbDByylHRY+IxCftzcgpBWENzU7rwD
-hljQmoDYIYXHoRzSU5I3A4v7lNAikyZBuZXO8zO/qly/L5BD3tNwLYQJJCc9UdGR+WHkkiO1yEX
-03XMWfrcglWRlI44aChiUWf4k2bVKYhVTtRt9+bE/Q2153biphNf5GilbUaiUvnl71YkwNyshEx
-YKyBFFTcq1lNxNxUEmpAX7UcicM1xDT/zGbHz09lwCC5qWEAzf0fHphvUesS0zn4ObZU+TH1+uy
-9j9rfC07HOGXaIKeEHZXqHGel1v2204jE0aZyB/ImMBjFxRAFcw7ueJuzXODcnD52M1hGJqvTjO
-LNrS5har9R4lh5Ko3MyZtFU+lDthwTOG+QKTNDDoIGQls1SBxW6MURcYkKTIhbLMYgyNvcByuxW
-2Uu/oRn+NMnOnH3h5JV6WCiZx0SPYgSHWOT0bCS0beBVjRet9hdzZ4pLO25XQrAVCPylL7iS3e9
-6QSsJ1VARxNcPnyAMrpOoyq4IcLqW50ti0Xl3GRaZn9KWLjWPx/IU3+TBUzTTQs750BNAuFe2nV
-T0EzGU+Wlar17MVoxwMAIsjudzFWlSAbcizpRhq0CHO66oJroVps79wfZ10OfGnTOd94Q86ELkM
-0fSoHQHwZCwFky1eFjdUzNYgTJeL4jL0BTv8QbfGDSeSWJCgpG1D0x1oePp9H9uxkv12vi5URoZ
-iFF2kzMkpXemig6pQelTyiCbHUU0gULokCro9HaJ4i0PJntTDXU2714z85gJ5u2e2Exfd+BqDkf
-zAnAPS1/fzTiLm8zOe/tBC/NCvtXlFP/oDXFBJ8sUUytdRzBmuk20BV89++Kqvtnb6h8+T+z3Ys
-T4bRhP6SYzDxZQjW6ebBIDaUjDq1yTB0jXLGSX5sU/fN9YfT72cOVnPTsRcHaiu9UnCcAKDYBsE
-5hF/0kFuqTOHypSgRtAwCKCJe+zLax5XfzDlMleAIrNdPOYHSqaKQnCAaggv+LkYhM/mdeQTxnH
-IVxx9WyFcTexHL0jAgzEBIRBFf7Uaq+vK88dbyt7bt9o1rOndcXqMTnitAVSHU8kzj0/2UtH8vX
-Yq1b7N7cwDKGsi3+UwW50GeRe5hkAz2Yyski6Tz+rvunU97XUnycnAd6dBgowIgPFDY00ithD1b
-IikqZSqnhTbYXAGHAWNDnGSAXKOsCHnplVbX0RVBMmKigfSHMPb3zNEEI/17W7fQlehAeSwbwvy
-8AJOWu42iKYDNWT9eYQdoLhq0HoTyO8KOoBKad+Jsv8UV5UX/mjqoobwxUa9/Az3pbmatQhGZlM
-Htd399gEqfCA+kL5d9+FSjPlPWGlJU54USZvWUldIp9Ptr46fm/VRAFBNUko/DI9snGRB38EXx3
-SW3EwrYi1vu/IZdMefY4IxGRxZg07cXXLna0WY6C1TennT4EhXsQlGQHlkpEa0tZ8r50/yid+oN
-3VXCQmUBRh9YCO5W6JGr/H6V+fxudGnON2NMVTj9evutAtxM70Vunn7H82jYxFQLZrLRFLkNFpY
-mq4UDYCFNdIOwyhqmldADW386azlS5RomTYGDnAGHzUEBDScQZF951X5thQEMZtKFZY+kLTxn3h
-k0EjiU/OXYDswaM8em5DV6OyUfqSOy+EWgzvinmMEkDoWKpVgPn66xtPAA+eA0Pw4Kqqo+9WRj7
-Bh5VVunUjDG+vb3/s4cZ1P2/FdPf7C8P6Phsg+njQMgE9aQoQYWOr0njFTqNprbH9NIZYv8M5NC
-Dvv4SEFFBFy2CDtm0wUW/eXGzxtPnM0Wh7mnI3Ma4rVATIx0wT60uVDr2SrEWr1RAMgHjqmf3VZ
-9NKrmaUJ+7jpx7OtSs3iiWIhmbOcFpPMrJmdv2GKw9q4bPE4le0sgNlsTIpqk8Yw7TXPMxXkZvt
-Nx7EwUFDGMOkBgExZ2SDbplYR6WBu0Nd3uLYSu7cZw1Wo7K3sAcU7S8Dqx+n/QLx+nWzIQewv7T
-NNoFyVM2C4zLyjfXa+dvOJJzBuCdN+omoGdAFZNRfS3yrlW8kRAfGZwpe/N5basuoKHwS0RZIAl
-CJxfWPdx6i1M52hIjyuSTfjRze8js3z+Ezf3b44DdaiEd40x5nbbceiH24tW5uRCIBaAQZqFBIS
-Q72lF7SnhDXS0A7vSdCve60SW2jtSEdisycVqtjKlv3mYJEq9+XP50D5gEfqyYKTo71Brk/ZbTO
-lGyLgoPiR272xJjaPatoJ72wXefDiFyxvf2Y52pm/rmWFuaN8TBr2Lpqz3tQYWJzTxu+laarBXs
-94IEnV3I9FnbNWXUdzLuKuEI6SxHnhGGgBMhppgF8XWaOiE89d6FjD7dyYnHKth0lz8EFwqeJ2D
-tlMXu6OdytbM+C2Bk5SunQWdv1UYID97A69jp2Q58dvctMLrW/Or0SC2ZoWGydrg8adK8qdx/7U
-50o1rtwasEe3CPhUQ5iLIEYYd6SupBeuNLCHj+vbP7SbSOf7ptWpgTgMfkXiABuvVyBAiYdoMDE
-3t+aj6bPCMus/B+07qgFVqwc35nyMHD3WdUqIdyD4M6frmZrQVFohsLq7jpkeaRTk0LAxdMfaJ4
-NFRp9ULTAEU6Dx/66s5h34AmDPAYbIHCaTZDAl2SvNUAOTmwXGtIsT7aQKeFNVF4siqjVKOn9NT
-c/t76DpBXWOUeLsI6Wq5Qe2VFm2SeFLFbw8ksQ5ckCXiNd259O3jGW0dr7GgrNr1qy6+mr2GH3u
-7UbpAGd7vAX1Jwt5iJbVGBIkBd8pnaQYquO7aPoLdXw28IPeSv+34SFb4UxTwKZ+mdVMPoFKpb3
-QQ7xt7V+OzD8zefSTeH7W1+HQPKr6QN2W4JT45bT5sPghLQ+aGEiJ4rCIwt5LeWAMq14zD9RVdI
-Wvlza5t3B33WzCDlUzXFEzHlxonlJgLLGfncFJLg/8AfGsY9GA2LqaGH2Hc4J4s1WgKW51C+lEV
-jIGvy30+HI0ZZqnAmpzr95bX78GpjiXkw42kojz5GbDVtj5gw2PS+b9hgMUuTLmZokEWnnfc97Q
-FCNfVVrrdntWSZ0svIwHJUF4uiFPa5Z0vtZ6RjyKsTykiGiE8mAD66+7L62ZSYAJe/Cj3AFgJwl
-1+YV1gQHSBaDy6F9XNX5sg4a1dKOV2fRGkW/WHdm1ab+l59loer9HeE7yWxn5KEcYuB9E5yCoto
-gh9cTDqEyFr+S+liDPsf9//+USn21EsTeohipD6bzbjepRaMXFuIVqER8BEKGoalrRxRx04esCD
-sBBZr4K6JijkPwO8Ad+JuXIXMYsV/g00IIlDd2rIkBIwhRTT2j0KUHxvFeU/pByYswM00mpZirP
-0NPbnwz1B+g8UiWVTMFCDHmaOSRRcuZmSNp/3gr7ePhtD9evtF2P1mFF5ZUKIoHb2ZpatYTEADZ
-eLkE131IVas7BJIvv8iwhwKprwdjl5HMnul/QnlQWTGftaOk39sHmDjrqVNSMG2eGyH0L5VCca1
-6F0ET52M3AyCOTj9v8/qcFl8joWyfLrvFeKsDo1DZADecO+03Pe+J8zp6MORZ2B3Xy3FpFZNtzR
-t/k/xpvjnHWnCHHeZUQ+CRM2h0Kmw8NsY1bnQ0GexBNzaVzODPqpqLII4Kg2LGT1sByewmrbLIq
-HXZ6o9tqwyGCMq76tf00ii5KED9SI5CuZEgQttTrAt00yUlfYe9PwJq69VWzSxEix1BJA6hTCQp
-/v3YO/LZ525JORMR3fhKJMqCktvrxStNCGM4KVmVs/aWbMmXP3o2qPBAypVkFii3tXKfqelSGvI
-HF2NKJ0hg2E8igt6yponZuHAo5rbHESr3Tf6E3EBRF0quVFvo4i9tOKvKk/xL3ChYv/mO469WsQ
-cp5b1IHYsWQHkDPAr8A/ClP92KsNvVXevWJFSoSD+irNw1BU2K4jSt2LMt3PInQvhW7qSq1Zjzc
-Ga3mWJw5X020lJB5YoGTsinIZ8lJ7uLUokblAPNG76VGaXktFg2+BFoxbS+Yrq8JsfDHKpuOdIf
-s+nTyi2mgCOSTdkx3NgjTWDE8OoiCQ+wigJ5PajFK5nglNYBG10W6USO1/trqvQWcMtl3TZvNFK
-BTyTErfTv3/OLu88EE1nQO7OuOcnJFsolctLjKitcU790j/tS9j3sNOLvUA2r0D74qiLpdw2z+c
-yiHfBwKBPkgZ/DOXcdb9aK5VGbOvlZ/JIWnw9zD57GqTUoxmRxuCgCGlrZOxZBDqBz5QMsN9SKN
-7zuFoan1YAQbSaTWtsVpJFyB4aNk5CIHe7s9+KUelZ62DFLbCzECwlDMCzwo9fcAbCTiibqE+wh
-mf865oRooxs72wu6t8H/ENEPx8Q+4U1X7ueY2ALPl2Va3pqPoOOyigDJ1A6cnBmu3jscb7b6Md6
-1YQ0y9yDqXWppV2RvGbwSLG3D8X778bYboaumCemjqxJglUC8PruRsGN8C7fTotJFffORFnqitR
-FEHpfIklDamhWurt76lKtfRcFBbUNIU/B5Chbv7vsKteLJ2WysRI6FWql5nui4tCpPRP53zwmvS
-8MKh32XrmI4gaN6FEfBHgpoMq2PGddD15jcUz8WpWmJ1dPIwq+U/rvVaOFVrPUYLptM8XeOhhk8
-umbfZgckKa9JcDwXmrs0L9Th6SX6pcJbKBgkgVoiN0n/gQqGMymlGWHuBalAkKroaDMSrC4JgqP
-Ji5bmvF8LbWL35ioN5SWiPi1gtkWrHX+CGLVO+YpipMCkfySIo0OhIuerRINWKA028vBbcNfir0
-HR/+xGL+Eq9E3uSkOokYgBjCPHkGmHsEj+Zwp0e9y0M/z/+HE3rdrf23tNiz7ofQjpln6m61/Hh
-JYbWCW/GfOseRtuJvpE8JltVGRktEWbqNpgsstFbrZPTvu6PvZp5MB11mYtLywgd8pGjL3dIFTT
-oqesDh9HnfZlsmDQoYFrpjZm2f233qRMKPw5FEqnIR+gsXyoguEiTNyilBbtXyA9LQlHHKjQwEb
-CjZ8j/3lQnJywLZOsfylU6XeITHGl3U+m2swioS1hRSs85N6Jgk0GKfauu2JEm+Sz3+aVoKILDG
-6RlJUgyLOn1ISUe8A4e2xL5PNtB4VCUV6Ip1PbMuSbhHLGSEGZ7yiqgV8m3nuBqRy4zpPiRKtDK
-SO8JurUVMqWy1gTv9Ukj/MamJlb184g5VPuYbosEkOd8RlJ0r71tHdr9AQRr6Q8s4rEZp7nPGij
-xX8+xZuuAakHxNJIkvbbHgtHz/jnEB6fHR+jrC+IvJGmOHCDjDuyQ4GD+wu8q+nsQ8lSXPURFKb
-uoz437dvNeCLtwtqJz9PR4U6aMV9WnZidA+JCe6tzYj/tAFD+f0M3RFmy6vzVTluhRa/uUDIFgA
-YjBhWtUd2bguSQpfZejgjBS1QOTJKQ5yNtsuaHwDBtl8zQJxtA4I2qrdT0oefz8cjkIoifqmqkv
-nsZmRAsM64IF1E7rhnIpVndbFJMQfU+oMFZK8vDnGCPxJG1+XUEnhmu1sJFh3iPVtrigzj8uI4k
-04T2JJgZElEB0nXlxC+UqV2YZYVnrlAe6zNUUdex52xVd9OuB1uP0yt0k2JCCFBZ67eWtydNu1a
-GnFFsOxm/bnXagXALinT7UV25AtBA5HaN7k9UfGGEPRPgTyi4gRACOdH9tmdCRFjuzF9tNhV9x5
-10W7VJvi/aihYwhmtEewdvWf39bLgPCCx3vx3+l6jCCDeA8xH6LKGO8ADo4QrVHRnUjjMtFMz7b
-QTI844h7c6FZOFt10bTXTzGE9Ri2hihwvysv3gorsramgqRaSh42oZyAODWdOwe1nnasmEseC1j
-yvDEpakQig17rTFIUxIS1LzGDcB5DM3f+YXVrfd/dQBgV0BnC1tm17bhB7w86mvBeaQlqoOxYsj
-ub1E2beIVAeRchDcmDdWrkaDhJn+q1POQv6OBgEqOzM3tFSimBkeLi0Qjd/1qYork0TQbJpkgsR
-ZMEavZcNU+VbcJIbfFb3ifzbZ/J1VPVmqqbLn5qQYlmzAFnHskBgcLhoeQ3FjEqRiDweK1joyYm
-bR3aqye3hjRUVBiI2iUfkhDfsC/JibwxNztq3Xrd9kNtfZXnd5uCFJxPKZRNX6b6VyUu4KbxY3r
-1GQ1lgNJwDdZUQuTss3B6gF78l5Hl3Tfk90j8wN61qfIqk/VUIcmA/iniC+66mproGxG1fE+TPt
-1ryiSTwLr++2Yi67m2hKhUA9h6nvuQBSMeEVuwmnl8vIK8lHSs//Re74UQQH5q2si0QRDFbxWkc
-EX6bUxDOJLCqhTvMXSfVRGhzwB9nE+5XK6gicZrg5IIJQUIlpouEjoy56yvcBiZ16zZdlQXPwJp
-MqRx94YgtBe23QIlgQVpti9hFstVIYAiiLHuF92yMzxUpg81cB91zhw708ZVwkGIcdw+OlLxQaL
-r1PtOESLYrLuET1Lrmhy7RKHIAw5RhkQVzTHJP/ApFSMw7Zc2TRHibjU7p2hTgcbUCjxHNkadZx
-1ZNKU4jdSdMH8991q+1+zkLnXG8t4CFVDycmj/H2rz3q+FlDVov0wfCV7nWiMJCqwnsBW8d/poe
-Tpy3ulh6pbAqQ43MBkaKeil9KSfM6Cn+lZbNKLv2faYtdqDnHE7OY+cdoRhujG0DxRVWzwrDsd3
-Mw4RqyiOZOYypL6zJ7BspQ10IaQlSutXfUJalGxFuAb3vvBmeEVrgvECFzpydxS3LrZGGw9dyNg
-O/0lnL3sXEUgM9KpXSk3n351BI8tU/ZYginIWhsojkq0xMPD+YRmy0w71j2ATWmIWf0h5WsVYij
-ksb5uP0qT3QS4C7xRYgA+BrtFwpdunMyRDH5l5ZyRPK8q+LYj1QYxlwvwjdIxBHWpjnJ4XH/WlA
-r+u7S+tnLob8lIucehrtc2tNInpiWtWnlQ/Dfqovdv2jn2R3t1hl2+abmxBtz4I5l1xfv5Z0QeL
-kn0DkAGm/Ww+T7lzGn3fnkLWcHnAb3Te3gc7HqzjtgerMpSZcfP57BjN5RVzmPjG318IZMwch7z
-wA8IUvuW0A/W3YvG+KIVTDVaL8dQkbAgga9JYRDAbHLqT0h4zt2LsB95XQvv1+TO1GkMZcYKCRC
-RSsEypFSsUFqzZ/HLAlNPrjgZW/hzRP46DwMh9vE4EZknpRysEmLruZS5Oz5fYNu1vhJaoxxmKK
-KjZZ3UiKzuNQCpM2v5tvbg6Uqg+7c6N5gs3WL7jMLwDEQFoa575sroV8ubrLITrTVrJzB5RFcvy
-ACT7ENxKucwtNcw1y7HFoVR7SjTV4tE82hMhvi9iaGWVP3wBmBQdq9zLDJ069FX6MGthVyyCuN0
-IiTY7Kk4yQWD2QyJJd8CZdWLzVARAiVXQZrl6Lwrw0pmKiq/aHPoLk2FYfMTw5tc/vCafrlDSdh
-kzU0Z3++3PnL78B+pxtwdoKulzYPmOZyVeIHySniLaGuq89Gq9GqzEYbv4mM6iuATIPD6ZL89D9
-F4pt9ur9+bgQ9kCflxSPyrKrban/adJXMvyOsCYyFVRDMg47aMsrFI3RsJ3ti52VxyW8zH2i5gm
-D88ExknF1DUVxP3ukKiLuIqGVtGAOstx1hhlEabKatmL/sII5fM8Eg59lX3LUuFFT5wHtV6peN2
-WthWvIos1u9Cs8LZwQ6LGewtFIJwejAc0Sg7qW8uY1+f6JEs3X8eyJMBPaDqRkzg37tZfs74WiS
-8yakg+6tvYeykGR9qVE7KZUEfuRBWJOshkxA==
-EOF
-);
+namespace App\Traits;
+
+use App\Facades\Squirrel;
+use App\Facades\Widget;
+use Illuminate\Contracts\Foundation\CachesConfiguration;
+use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+use ReflectionClass;
+
+trait ModuleServiceProviderTrait {
+
+    protected $path;
+    protected $package;
+    protected $namespace;
+    protected $moduleName;
+
+    public function __construct(Application $app)
+    {
+        parent::__construct($app);
+        try {
+            $reflector = new ReflectionClass(get_class($this));
+        } catch (\ReflectionException $e) {
+            abort(500);
+        }
+        $this->path = dirname($reflector->getFileName());
+        $packages = explode('/', Str::afterLast(str_replace('\\', '/', $this->path), 'vendor/'));
+        $this->package = $packages[0].'/'.$packages[1];
+        $this->namespace = $reflector->getNamespaceName();
+        $this->moduleName = class_basename($this->namespace);
+        unset($reflector);
+    }
+
+    public function boot()
+    {
+        config(["modules.{$this->namespace}" => [
+            'name'      => $this->moduleName,
+            'path'      => $this->path,
+            'package'   => $this->package,
+            'namespace' => $this->namespace
+        ]]);
+
+        if (File::exists($this->path('routes/web.php'))) $this->registerRoute();
+        if (File::exists($this->path('routes/admin.php'))) $this->registerRouteAdmin();
+        if (File::exists($this->path('routes/api.php'))) $this->registerRouteApi();
+        if (File::isDirectory($this->path('Languages'))) $this->registerTranslate();
+        if (File::isDirectory($this->path('Views'))) $this->registerView();
+        if (File::exists($this->path('helpers.php'))) $this->registerHelper();
+        if (File::exists($this->path('config.php'))) $this->registerConfig();
+        if (File::isDirectory($this->path('Migrations'))) $this->registerMigration();
+        if (isset($this->casts)) $this->registerCasts($this->casts);
+        if (isset($this->components)) $this->registerComponents($this->components, strtolower($this->moduleName));
+        if (isset($this->permissions)) $this->registerPermissions($this->permissions, strtolower($this->moduleName));
+        if (isset($this->adminMenus) || isset($this->appendAdminMenus)) $this->registerAdminMenus(strtolower($this->moduleName));
+        if (isset($this->notifications)) $this->registerNotifications($this->notifications);
+        if (isset($this->widgets)) $this->registerWidgets($this->widgets);
+    }
+
+    private function registerRouteAdmin() {
+        Route::middleware(['web', 'auth:employee'])
+            ->namespace($this->namespace('Controllers\Admin'))
+            ->prefix(config('app.admin_prefix'))
+            ->name('admin.')
+            ->group($this->path('routes/admin.php'));
+    }
+
+    private function registerRouteApi() {
+        Route::middleware('api')
+            ->namespace($this->namespace('Controllers\Api'))
+            ->prefix('api')
+            ->name('api.')
+            ->group($this->path('routes/api.php'));
+    }
+
+    private function registerRoute() {
+        Route::middleware('web')
+            ->namespace($this->namespace('Controllers'))
+            ->group($this->path('routes/web.php'));
+    }
+
+    private function registerHelper($file = 'helpers.php') {
+        try {
+            require_once ($this->path($file));
+        } catch (\Exception $e) {
+
+        }
+    }
+
+    private function registerTranslate($path = 'Languages', $key = false) {
+        $this->loadTranslationsFrom($this->path($path), $key?:$this->moduleName);
+        $this->loadJsonTranslationsFrom($this->path($path));
+    }
+
+    private function registerConfig($file = 'config.php', $key = false) {
+        $this->mergeConfigFrom($this->path($file), $key?:$this->moduleName);
+    }
+
+    private function registerView($path = 'Views', $key = false) {
+        $this->loadViewsFrom($this->path($path), $key?:$this->moduleName);
+    }
+
+    private function registerComponents($components, $key = false) {
+        $this->loadViewComponentsAs($key?:$this->moduleName, $components);
+    }
+
+    private function registerPermissions($permissions, $key = false) {
+
+        if (! ($this->app instanceof CachesConfiguration && $this->app->configurationIsCached())) {
+            $config = $this->app->make('config');
+
+            $config->set('permission.modules.'.($key?:$this->moduleName), $permissions);
+        }
+    }
+
+    private function registerAdminMenus($key = false) {
+
+        if (isset($this->adminMenus)) {
+            Squirrel::addAdminMenu([
+                $key?:$this->moduleName => $this->adminMenus
+            ]);
+        }
+        if (isset($this->appendAdminMenus)) {
+            foreach ($this->appendAdminMenus as $parent => $menu) {
+                Squirrel::addAdminMenu($menu, $parent);
+            }
+        }
+    }
+
+    private function registerMigration($path = 'Migrations') {
+        $this->loadMigrationsFrom( $this->path($path));
+    }
+
+    private function registerCasts($casts) {
+        $_casts = $this->app['config']->get('app.casts');
+        $this->app['config']->set('app.casts', array_merge((array)$_casts, $casts));
+        unset($_casts);
+        unset($casts);
+    }
+
+    private function registerNotifications($notifications) {
+        foreach ($notifications as $notifySetting) {
+            $for = $notifySetting['for'];
+            $key = $notifySetting['key'];
+            unset($notifySetting['for']);
+            unset($notifySetting['key']);
+            $this->app['config']->set("notify.{$for}.{$key}", $notifySetting);
+        }
+    }
+
+    private function registerWidgets($widget, $action = null) {
+        Widget::register($widget, $action);
+    }
+
+    protected function path($file) {
+        $file = ltrim($file, '/');
+        return "{$this->path}/{$file}";
+    }
+
+    protected function namespace($name) {
+        $name = ltrim($name, '\\');
+        return "{$this->namespace}\\{$name}";
+    }
+}

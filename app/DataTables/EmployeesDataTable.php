@@ -17,7 +17,6 @@ class EmployeesDataTable extends BaseDataTable
 
     protected $columns = [
         'username' => [
-            'data' => '_info',
             'title' => 'User',
             'raw' => 'Admin::datatable.user-info'
         ],
@@ -29,7 +28,6 @@ class EmployeesDataTable extends BaseDataTable
             'raw' => 'Admin::system.employee.role'
         ],
         'status' => [
-            'data' => '_status',
             'raw' => 'Admin::system.employee.status'
         ],
         'action' => [

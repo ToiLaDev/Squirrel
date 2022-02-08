@@ -28,6 +28,7 @@
     "/css/base/pages/page-misc.css": "/css/base/pages/page-misc.css",
     "/css/base/pages/authentication.css": "/css/base/pages/authentication.css",
     "/css/base/pages/app-file-manager.css": "/css/base/pages/app-file-manager.css",
+    "/css/base/pages/app-calendar.css": "/css/base/pages/app-calendar.css",
     "/css/base/plugins/ui/coming-soon.css": "/css/base/plugins/ui/coming-soon.css",
     "/css/base/plugins/maps/map-leaflet.css": "/css/base/plugins/maps/map-leaflet.css",
     "/css/base/plugins/forms/pickers/form-pickadate.css": "/css/base/plugins/forms/pickers/form-pickadate.css",

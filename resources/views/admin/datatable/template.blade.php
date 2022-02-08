@@ -31,7 +31,7 @@
                 </div>
                 <hr class="my-0" />
                 @endisset
-                {{$dataTable->table()}}
+                {!! $dataTable->table() !!}
             </div>
         </div>
     </div>
