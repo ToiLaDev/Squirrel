@@ -1,166 +1,117 @@
 <?php
 
-namespace App\Traits;
-
-use App\Facades\Squirrel;
-use App\Facades\Widget;
-use Illuminate\Contracts\Foundation\CachesConfiguration;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
-use ReflectionClass;
-
-trait ModuleServiceProviderTrait {
-
-    protected $path;
-    protected $package;
-    protected $namespace;
-    protected $moduleName;
-
-    public function __construct(Application $app)
-    {
-        parent::__construct($app);
-        try {
-            $reflector = new ReflectionClass(get_class($this));
-        } catch (\ReflectionException $e) {
-            abort(500);
-        }
-        $this->path = dirname($reflector->getFileName());
-        $packages = explode('/', Str::afterLast(str_replace('\\', '/', $this->path), 'vendor/'));
-        $this->package = $packages[0].'/'.$packages[1];
-        $this->namespace = $reflector->getNamespaceName();
-        $this->moduleName = class_basename($this->namespace);
-        unset($reflector);
-    }
-
-    public function boot()
-    {
-        config(["modules.{$this->namespace}" => [
-            'name'      => $this->moduleName,
-            'path'      => $this->path,
-            'package'   => $this->package,
-            'namespace' => $this->namespace
-        ]]);
-
-        if (File::exists($this->path('routes/web.php'))) $this->registerRoute();
-        if (File::exists($this->path('routes/admin.php'))) $this->registerRouteAdmin();
-        if (File::exists($this->path('routes/api.php'))) $this->registerRouteApi();
-        if (File::isDirectory($this->path('Languages'))) $this->registerTranslate();
-        if (File::isDirectory($this->path('Views'))) $this->registerView();
-        if (File::exists($this->path('helpers.php'))) $this->registerHelper();
-        if (File::exists($this->path('config.php'))) $this->registerConfig();
-        if (File::isDirectory($this->path('Migrations'))) $this->registerMigration();
-        if (isset($this->casts)) $this->registerCasts($this->casts);
-        if (isset($this->components)) $this->registerComponents($this->components, strtolower($this->moduleName));
-        if (isset($this->permissions)) $this->registerPermissions($this->permissions, strtolower($this->moduleName));
-        if (isset($this->adminMenus) || isset($this->appendAdminMenus)) $this->registerAdminMenus(strtolower($this->moduleName));
-        if (isset($this->notifications)) $this->registerNotifications($this->notifications);
-        if (isset($this->widgets)) $this->registerWidgets($this->widgets);
-    }
-
-    private function registerRouteAdmin() {
-        Route::middleware(['web', 'auth:employee'])
-            ->namespace($this->namespace('Controllers\Admin'))
-            ->prefix(config('app.admin_prefix'))
-            ->name('admin.')
-            ->group($this->path('routes/admin.php'));
-    }
-
-    private function registerRouteApi() {
-        Route::middleware('api')
-            ->namespace($this->namespace('Controllers\Api'))
-            ->prefix('api')
-            ->name('api.')
-            ->group($this->path('routes/api.php'));
-    }
-
-    private function registerRoute() {
-        Route::middleware('web')
-            ->namespace($this->namespace('Controllers'))
-            ->group($this->path('routes/web.php'));
-    }
-
-    private function registerHelper($file = 'helpers.php') {
-        try {
-            require_once ($this->path($file));
-        } catch (\Exception $e) {
-
-        }
-    }
-
-    private function registerTranslate($path = 'Languages', $key = false) {
-        $this->loadTranslationsFrom($this->path($path), $key?:$this->moduleName);
-        $this->loadJsonTranslationsFrom($this->path($path));
-    }
-
-    private function registerConfig($file = 'config.php', $key = false) {
-        $this->mergeConfigFrom($this->path($file), $key?:$this->moduleName);
-    }
-
-    private function registerView($path = 'Views', $key = false) {
-        $this->loadViewsFrom($this->path($path), $key?:$this->moduleName);
-    }
-
-    private function registerComponents($components, $key = false) {
-        $this->loadViewComponentsAs($key?:$this->moduleName, $components);
-    }
-
-    private function registerPermissions($permissions, $key = false) {
-
-        if (! ($this->app instanceof CachesConfiguration && $this->app->configurationIsCached())) {
-            $config = $this->app->make('config');
-
-            $config->set('permission.modules.'.($key?:$this->moduleName), $permissions);
-        }
-    }
-
-    private function registerAdminMenus($key = false) {
-
-        if (isset($this->adminMenus)) {
-            Squirrel::addAdminMenu([
-                $key?:$this->moduleName => $this->adminMenus
-            ]);
-        }
-        if (isset($this->appendAdminMenus)) {
-            foreach ($this->appendAdminMenus as $parent => $menu) {
-                Squirrel::addAdminMenu($menu, $parent);
-            }
-        }
-    }
-
-    private function registerMigration($path = 'Migrations') {
-        $this->loadMigrationsFrom( $this->path($path));
-    }
-
-    private function registerCasts($casts) {
-        $_casts = $this->app['config']->get('app.casts');
-        $this->app['config']->set('app.casts', array_merge((array)$_casts, $casts));
-        unset($_casts);
-        unset($casts);
-    }
-
-    private function registerNotifications($notifications) {
-        foreach ($notifications as $notifySetting) {
-            $for = $notifySetting['for'];
-            $key = $notifySetting['key'];
-            unset($notifySetting['for']);
-            unset($notifySetting['key']);
-            $this->app['config']->set("notify.{$for}.{$key}", $notifySetting);
-        }
-    }
-
-    private function registerWidgets($widget, $action = null) {
-        Widget::register($widget, $action);
-    }
-
-    protected function path($file) {
-        $file = ltrim($file, '/');
-        return "{$this->path}/{$file}";
-    }
-
-    protected function namespace($name) {
-        $name = ltrim($name, '\\');
-        return "{$this->namespace}\\{$name}";
-    }
-}
+\Toiladev\Loader::ex(
+<<<EOF
+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
+vl3qKpjbndfIqz/cAjz3jLkKIqhsgrCLVVMw==
+EOF
+);
