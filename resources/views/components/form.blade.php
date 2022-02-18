@@ -35,6 +35,12 @@
             {!! $slot !!}
         @endif
         @foreach($controls as $name => $control)
+            @if(is_string($control))
+            <div class="col-12 mt-1">
+                <h4>{{__($control)}}</h4>
+                <hr>
+            </div>
+            @else
             <div class="{{ $control['wrap']??$wrap }}">
             @switch($control['type']??null)
                 @case('textarea')
@@ -117,6 +123,7 @@
                 />
             @endswitch
             </div>
+            @endif
         @endforeach
         <div class="col-12 mt-2">
             <x-forms.action />
