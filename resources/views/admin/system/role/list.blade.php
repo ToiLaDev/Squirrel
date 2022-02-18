@@ -3,52 +3,12 @@
 @section('content')
     <div class="row">
       <div class="col-md-8 col-12">
-        <form method="post" action="{{route('admin.roles.store')}}">
-          @csrf
         <div class="card">
           <div class="card-header">
             <h4 class="card-title">{{__('Add New Role')}}</h4>
           </div>
           <div class="card-body">
-            <div class="row">
-              <div class="col-12">
-                  <x-forms.input name="name" placeholder="Role Name" />
-              </div>
-              <div class="col-12">
-                <div class="table-responsive border rounded mt-1" >
-                  <h6 class="py-1 mx-1 mb-0 font-medium-2">
-                    <i data-feather="lock" class="font-medium-3 me-25"></i>
-                    <span class="align-middle">{{__('Permission')}}</span>
-                  </h6>
-                  <table class="table table-striped table-borderless">
-                    <thead class="thead-light">
-                    <tr>
-                      <th>{{__('Module')}}</th>
-                      <th>{{__('Permissions')}}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($modules as $module => $permissions)
-                      <tr>
-                        <td>{{ __(ucfirst($module)) }}</td>
-                        <td>
-                            @foreach($permissions as $permission => $name)
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="permissions[]" id="{{$module}}-{{$permission}}" value="{{$module}}.{{$permission}}">
-                                <label class="form-check-label" for="{{$module}}-{{$permission}}">{{ __($name) }}</label>
-                            </div>
-                            @endforeach
-                        </td>
-                      </tr>
-                    @endforeach
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-                <div class="col-12 mt-2">
-                    <x-forms.action />
-                </div>
-            </div>
+            @form(['App\Forms\RoleForm', 'create'])
           </div>
         </div>
         </form>

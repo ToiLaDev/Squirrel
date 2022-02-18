@@ -49,6 +49,13 @@ class Form extends Component
     public $layout;
 
     /**
+     * The Form wrap.
+     *
+     * @var string
+     */
+    public $wrap;
+
+    /**
      * The Form col.
      *
      * @var array
@@ -66,8 +73,9 @@ class Form extends Component
         $action = null,
         $method = 'post',
         $prefixId = 'input',
+        $layout = 'vertical',
         $col = [3,9],
-        $layout = 'vertical'
+        $wrap = 'col-12'
     )
     {
         $this->controls = $controls;
@@ -76,8 +84,13 @@ class Form extends Component
         $this->prefixId = $prefixId;
         $this->method = strtoupper($method);
         $this->layout = $layout;
+        $this->wrap = $wrap;
         if ($this->layout == 'horizontal') {
             $this->class .= ' row';
+            if (isset($fill['col'])) {
+                $col = $fill['col'];
+            }
+            $this->col = is_string($col)?explode(',', $col):$col;
         }
     }
 

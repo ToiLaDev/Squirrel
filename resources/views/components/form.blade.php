@@ -31,11 +31,15 @@
     @method($method)
     @endif
     <div class="row">
-        @foreach($controls as $control)
-            @isset($control['type'])
-            @switch($control['type'])
+        @if(!$slot->isEmpty())
+            {!! $slot !!}
+        @endif
+        @foreach($controls as $name => $control)
+            <div class="{{ $control['wrap']??$wrap }}">
+            @switch($control['type']??null)
                 @case('textarea')
                 <x-forms.textarea
+                    :name="$name"
                     :fill="$control"
                     :prefixId="$prefixId"
                     :layout="$layout"
@@ -44,30 +48,77 @@
                 @break
                 @case('quill')
                 <x-forms.quill
+                    :name="$name"
                     :fill="$control"
                     :prefixId="$prefixId"
                     :layout="$layout"
                     :col="$col"
                 />
                 @break
+                @case('image')
+                <x-forms.image
+                        :name="$name"
+                        :fill="$control"
+                        :prefixId="$prefixId"
+                        :layout="$layout"
+                        :col="$col"
+                />
+                @break
+                @case('select')
+                <x-forms.select
+                        :name="$name"
+                        :fill="$control"
+                        :prefixId="$prefixId"
+                        :layout="$layout"
+                        :col="$col"
+                />
+                @break
+                @case('select2')
+                <x-forms.select2
+                        :name="$name"
+                        :fill="$control"
+                        :prefixId="$prefixId"
+                        :layout="$layout"
+                        :col="$col"
+                />
+                @break
+                @case('employee')
+                <x-employee.select2
+                        :name="$name"
+                        :fill="$control"
+                        :prefixId="$prefixId"
+                        :layout="$layout"
+                        :col="$col"
+                />
+                @break
+                @case('role')
+                <x-role.select2
+                        :name="$name"
+                        :fill="$control"
+                        :prefixId="$prefixId"
+                        :layout="$layout"
+                        :col="$col"
+                />
+                @break
+                @case('permission')
+                <x-forms.permission
+                        :name="$name"
+                        :title="$control['title']??'Permission'"
+                        :model="$control['model']??null"
+                />
+                @break
                 @default
                 <x-forms.input
+                    :name="$name"
                     :fill="$control"
                     :prefixId="$prefixId"
                     :layout="$layout"
                     :col="$col"
                 />
             @endswitch
-            @else
-                <x-forms.input
-                    :fill="$control"
-                    :prefixId="$prefixId"
-                    :layout="$layout"
-                    :col="$col"
-                />
-            @endisset
+            </div>
         @endforeach
-        <div class="col-12 mt-50">
+        <div class="col-12 mt-2">
             <x-forms.action />
         </div>
     </div>

@@ -181,6 +181,29 @@ if (!function_exists('endNotEmptyBlade')) {
     }
 }
 
+if (!function_exists('formBlade')) {
+    function formBlade($variable): string
+    {
+        return "<?php echo form_render({$variable}); ?>";
+    }
+}
+
+if (!function_exists('form_render')) {
+    function form_render($action, $variable = null): string
+    {
+        if (is_string($action)) {
+            $action = explode('@', $action);
+        }
+        $form = app($action[0]);
+
+        if ($variable == null) {
+            return $form->{$action[1]}();
+        } else {
+            return $form->{$action[1]}($variable);
+        }
+    }
+}
+
 if (!function_exists('name2Title')) {
     function name2Title($name): string
     {
