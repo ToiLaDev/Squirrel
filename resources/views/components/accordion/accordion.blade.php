@@ -11,22 +11,23 @@
                         header.
                     </p>
                     <div class="accordion accordion-margin" id="accordionMargin">
+                    @foreach($options as $key => $option)
+                        @if (is_string($option))
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingMarginOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionMarginOne" aria-expanded="false" aria-controls="accordionMarginOne">
-                                    Accordion Item 1
+                            <h2 class="accordion-header" id="{{$option->id}}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{$option->data_target}}" aria-expanded="false" aria-controls="accordionMarginOne">
+                                {{__($option->title) }}
                                 </button>
                             </h2>
-                            <div id="accordionMarginOne" class="accordion-collapse collapse" aria-labelledby="headingMarginOne" data-bs-parent="#accordionMargin">
+                            <div id="{{$option->data_target}}" class="accordion-collapse collapse" aria-labelledby="{{$option->id}}" data-bs-parent="#accordionMargin">
                                 <div class="accordion-body">
-                                    Pastry pudding cookie toffee bonbon jujubes jujubes powder topping. Jelly beans gummi bears sweet roll
-                                    bonbon muffin liquorice. Wafer lollipop sesame snaps. Brownie macaroon cookie muffin cupcake candy
-                                    caramels tiramisu. Oat cake chocolate cake sweet jelly-o brownie biscuit marzipan. Jujubes donut
-                                    marzipan chocolate bar. Jujubes sugar plum jelly beans tiramisu icing cheesecake.
+                                {{__($option->description) }}
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        @endif
+                    @endforeach
+                        <!-- <div class="accordion-item">
                             <h2 class="accordion-header" id="headingMarginTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionMarginTwo" aria-expanded="false" aria-controls="accordionMarginTwo">
                                     Accordion Item 2
@@ -69,7 +70,7 @@
                                     wafer tootsie roll. Tootsie roll sweet cupcake.
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

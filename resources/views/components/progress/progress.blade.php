@@ -8,17 +8,21 @@
         <div class="card-body">
           <p class="card-text">Use class <code>.progress-bar-{color-name}</code>. to choose color of your choice.</p>
           <div class="demo-vertical-spacing">
-            <div class="progress progress-bar-primary">
+          @foreach($options as $key => $option)
+            @if (is_string($option))
+            <div class="progress progress-bar-{{$option->name}}">
               <div
                 class="progress-bar"
                 role="progressbar"
-                aria-valuenow="25"
-                aria-valuemin="25"
+                aria-valuenow="{{$option->valuenow}}"
+                aria-valuemin="{{$option->valuemin}}"
                 aria-valuemax="100"
-                style="width: 25%"
+                style="{{$option->valuemin}}"
               ></div>
             </div>
-            <div class="progress progress-bar-secondary">
+            @endif
+          @endforeach
+            <!-- <div class="progress progress-bar-secondary">
               <div
                 class="progress-bar"
                 role="progressbar"
@@ -77,7 +81,7 @@
                 aria-valuemax="100"
                 style="width: 85%"
               ></div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

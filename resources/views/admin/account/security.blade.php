@@ -81,6 +81,7 @@
                 </div>
             </div>
             <!--/ profile -->
+            <x-accordion.accordion />
         </div>
     </div>
 @endsection
