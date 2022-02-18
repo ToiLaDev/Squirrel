@@ -77,6 +77,7 @@ class RouteMethods
                                     $this->get('', 'DashboardController@index')->name('dashboard');
 
                                     $this->group(['prefix' => 'system'], function() {
+                                        $this->get('employees/search', 'EmployeeController@search')->name('employees.search');
                                         $this->resource('employees', 'EmployeeController')->except([
                                             'show'
                                         ]);

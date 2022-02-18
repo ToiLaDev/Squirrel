@@ -9,39 +9,46 @@ class Quill extends Component
 {
 
     /**
-     * The Input name.
+     * The Quill name.
      *
      * @var string
      */
     public $name;
 
     /**
-     * The Input value.
+     * The Quill value.
      *
      * @var string
      */
     public $value;
 
     /**
-     * The Input prefixId.
+     * The Quill prefixId.
      *
      * @var string
      */
     public $prefixId;
 
     /**
-     * The Input containerClass.
+     * The Quill containerClass.
      *
      * @var string
      */
     public $containerClass;
 
     /**
-     * The Input title.
+     * The Quill title.
      *
      * @var string
      */
     public $title;
+
+    /**
+     * The Quill fill.
+     *
+     * @var array
+     */
+    public $fill;
 
     /**
      * Create a new component instance.

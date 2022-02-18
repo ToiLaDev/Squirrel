@@ -29,12 +29,8 @@
                             <x-forms.select name="status" :value="$employee->status" :options="[['value'=>1,'title'=>__('Active')],['value'=>0,'title'=>__('Inactive')]]" />
                         </div>
                         <div class="col-md-4">
-                            <x-forms.select name="role" :disabled="$admin->cannot('employee.permission')">
-                                <option value="">{{ __('-- Choose Role --') }}</option>
-                                @foreach($roles as $role)
-                                    <option @if($employee->hasRole($role)) selected @endif >{{$role->name}}</option>
-                                @endforeach
-                            </x-forms.select>
+                            <x-role.select2 name="role" :disabled="$admin->cannot('employee.permission')" :multiple="true" placeholder="-- Choose Role --" :value="$employee->roles->pluck('id')->all()" >
+                            </x-role.select2>
                         </div>
                         <div class="col-md-4">
                             <x-forms.input name="password" type="password" />

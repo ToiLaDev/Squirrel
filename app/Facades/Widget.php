@@ -5,6 +5,14 @@ namespace App\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * Class Widget
+ * @package App
+ * @method static register($widget, $action = null)
+ * @method static display($name, $data = null)
+ * @method static boolean has($name)
+ */
+
 class Widget extends Facade
 {
     /**

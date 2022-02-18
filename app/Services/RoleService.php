@@ -28,4 +28,20 @@ class RoleService extends RepositoryService implements RoleServiceImpl
         return $this->firstRepo->update($id, $attributes, $permissions);
     }
 
+    private $role = null;
+
+    public function toSelect($roles = null) {
+        if ($roles === null) {
+            $roles = $this->firstRepo->all();
+        }
+        $options = [];
+        foreach ($roles as $role) {
+            $options[] = [
+                'title' => $role->name,
+                'value' => $role->id
+            ];
+        }
+        return $options;
+    }
+
 }

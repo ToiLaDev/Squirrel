@@ -122,6 +122,13 @@ class Input extends Component
     public $required;
 
     /**
+     * The Input fill.
+     *
+     * @var array
+     */
+    public $fill;
+
+    /**
      * Create a new component instance.
      *
      * @return void

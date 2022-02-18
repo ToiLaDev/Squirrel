@@ -86,6 +86,13 @@ class Image extends Component
     public $url;
 
     /**
+     * The Image fill.
+     *
+     * @var array
+     */
+    public $fill;
+
+    /**
      * Create a new component instance.
      *
      * @return void

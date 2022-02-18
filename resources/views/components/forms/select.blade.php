@@ -38,7 +38,7 @@
                     @endphp
                     <option
                         value="{{$option['value']}}"
-                        @if($multiple?in_array($option['value'], $value):$value === $option['value'])
+                        @if($multiple?in_array($option['value'], (array)$value):$value === $option['value'])
                             selected
                         @endif
                     >{{$option['title']}}</option>

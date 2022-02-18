@@ -155,6 +155,13 @@ class Number extends Component
     public $datas;
 
     /**
+     * The Number fill.
+     *
+     * @var array
+     */
+    public $fill;
+
+    /**
      * Create a new component instance.
      *
      * @return void

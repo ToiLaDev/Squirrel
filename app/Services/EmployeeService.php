@@ -178,4 +178,31 @@ class EmployeeService extends RepositoryService implements EmployeeServiceImpl
         return $notifySetting;
     }
 
+    public function searchFromRequest($request)
+    {
+        $attributes = $request->only(['role', 'q']);
+
+        $results = $this->firstRepo->newQuery()
+            ->where(function($query) use ($attributes) {
+                $query->where('id', $attributes['q']);
+                $query->orWhere('phone', 'LIKE', '%' . $attributes['q'] . '%');
+                $query->orWhere('email', 'LIKE', '%' . $attributes['q'] . '%');
+                $query->orWhere('first_name', 'LIKE', '%' . $attributes['q'] . '%');
+                $query->orWhere('last_name', 'LIKE', '%' . $attributes['q'] . '%');
+            })
+            ->where(function($query) use ($attributes) {
+                if (!empty($attributes['role'])) {
+                    $query->whereHas('roles', function ($q) use ($attributes) {
+                        $q->whereIn('id', (array)$attributes['role']);
+                    });
+                }
+            })
+            ->select(['id', 'first_name', 'last_name', 'phone', 'email', 'avatar'])
+            ->limit(5)
+            ->get()
+        ;
+
+        return $results;
+    }
+
 }

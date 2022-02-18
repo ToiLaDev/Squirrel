@@ -113,6 +113,14 @@ class SwitchInput extends Component
     public $datas;
 
     /**
+     * The SwitchInput fill.
+     *
+     * @var array
+     */
+    public $fill;
+
+
+    /**
      * Create a new component instance.
      *
      * @return void

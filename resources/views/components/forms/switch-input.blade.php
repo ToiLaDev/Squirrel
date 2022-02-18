@@ -36,12 +36,12 @@
                 />
                 @if(!empty($placeholder) || !empty($iconLeft) || !empty($iconRight))
                 <label class="form-check-label" for="{{$prefixId}}-{{$name}}">
-                    @if(!empty($iconLeft))
+                    @notEmpty($iconLeft)
                     <span class="switch-icon-left"><i class="{{$iconLeft}}"></i></span>
-                    @endif
-                    @if(!empty($iconRight))
+                    @endNotEmpty
+                    @notEmpty($iconRight)
                     <span class="switch-icon-right"><i class="{{$iconRight}}"></i></span>
-                        @endif
+                    @endNotEmpty
                     {{ $placeholder }}
                 </label>
                 @endif

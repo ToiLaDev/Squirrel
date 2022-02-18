@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     public $permissions = [
-        'employee.view' => ['index'],
+        'employee.view' => ['index', 'search'],
         'employee.create' => ['create', 'store'],
         'employee.edit' => ['edit', 'update'],
         'employee.delete' => ['destroy']
@@ -38,14 +38,10 @@ class EmployeeController extends Controller
 
         $this->breadcrumb('Employees')->withButtonMain();
 
-
-        $roles = $this->employeeService->allRoles();
-
         $modules = config('permission.modules');
 
         return view('Admin::system.employee.create', [
-            'modules' => $modules,
-            'roles' => $roles
+            'modules' => $modules
         ]);
     }
 
@@ -53,15 +49,13 @@ class EmployeeController extends Controller
 //        if ($id == 1) return abort(404);
         $this->breadcrumb('Employees')->withButtonMain();
 
-        $roles = $this->employeeService->allRoles();
         $employee = $this->employeeService->find($id);
 
         $modules = config('permission.modules');
 
         return view('Admin::system.employee.edit', [
             'employee' => $employee,
-            'modules' => $modules,
-            'roles' => $roles
+            'modules' => $modules
         ]);
     }
 
@@ -86,5 +80,10 @@ class EmployeeController extends Controller
         //$this->employeeService->delete($id);
 
         return $this->deleteResponse();
+    }
+
+    public function search(Request $request) {
+        $employees = $this->employeeService->searchFromRequest($request);
+        return $this->success($employees);
     }
 }

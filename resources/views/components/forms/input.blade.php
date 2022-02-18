@@ -68,9 +68,9 @@
             id="{{$prefixId}}-{{$name}}"
             name="{{$name}}"
             class="form-control {{ $class }} @error($name) is-invalid @enderror @if(in_array($type, ['date', 'datetime'])) flatpickr @endif"
-            @isset($placeholder)
+            @notEmpty($placeholder)
             placeholder="{{ $placeholder }}"
-            @endisset
+            @endNotEmpty
             value="{{ old($name, $value) }}"
             @if($disabled)
             disabled

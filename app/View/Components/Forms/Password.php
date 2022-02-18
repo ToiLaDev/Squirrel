@@ -102,6 +102,13 @@ class Password extends Component
     public $randomCharset;
 
     /**
+     * The Password fill.
+     *
+     * @var array
+     */
+    public $fill;
+
+    /**
      * Create a new component instance.
      *
      * @return void

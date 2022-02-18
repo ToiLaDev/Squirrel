@@ -2,10 +2,13 @@
 
 use \Illuminate\Support\Facades\Crypt;
 use \Illuminate\Contracts\View\View as ViewImpl;
+use Illuminate\Support\Facades\Route;
 use \Illuminate\Support\Facades\View;
 use \App\Services\ActivityHelper;
 use \App\Facades\Widget;
 use \Illuminate\Support\Facades\Date;
+use \Illuminate\Support\Str;
+use \App\Facades\Asset;
 
 if (!function_exists('baseView')) {
     function baseView($view, $datas = []): ViewImpl
@@ -78,11 +81,11 @@ if (!function_exists('scripts')) {
     function scripts($stack = 'default', $script = null)
     {
         if (empty($script)) {
-            \Asset::getScripts($stack)->each(function ($item, $key) {
+            Asset::getScripts($stack)->each(function ($item, $key) {
                 echo "<script src=\"{$item}\"></script>\r\n";
             });
         } else {
-            \Asset::addScript($stack, $script);
+            Asset::addScript($stack, $script);
         }
     }
 }
@@ -91,26 +94,26 @@ if (!function_exists('styles')) {
     function styles($stack = 'default', $style = null)
     {
         if (empty($style)) {
-            \Asset::getStyles($stack)->each(function ($item, $key) {
+            Asset::getStyles($stack)->each(function ($item, $key) {
                 echo "<link rel=\"stylesheet\" href=\"{$item}\" />\r\n";
             });
         } else {
-            \Asset::addStyle($stack, $style);
+            Asset::addStyle($stack, $style);
         }
     }
 }
 
 if (!function_exists('scriptBlade')) {
-    function scriptBlade($value): string
+    function scriptBlade($variables): string
     {
-        return "<?php scripts({$value}); ?>";
+        return "<?php scripts({$variables}); ?>";
     }
 }
 
 if (!function_exists('styleBlade')) {
-    function styleBlade($value): string
+    function styleBlade($variables): string
     {
-        return "<?php styles({$value}); ?>";
+        return "<?php styles({$variables}); ?>";
     }
 }
 
@@ -124,35 +127,35 @@ if (!function_exists('widget')) {
 }
 
 if (!function_exists('widgetBlade')) {
-    function widgetBlade($value): string
+    function widgetBlade($variables): string
     {
-        return "<?php widget({$value}); ?>";
+        return "<?php widget({$variables}); ?>";
     }
 }
 
 if (!function_exists('isActiveBlade')) {
-    function isActiveBlade($value): string
+    function isActiveBlade($variables): string
     {
-        return "<?php isActive({$value}); ?>";
+        return "<?php isActive({$variables}); ?>";
     }
 }
 
 if (!function_exists('isActive')) {
     function isActive($route, $class = 'active')
     {
-        echo \Route::currentRouteName() == $route ? $class :'';
+        echo Route::currentRouteName() == $route ? $class :'';
     }
 }
 
 if (!function_exists('datetimeBlade')) {
-    function datetimeBlade($value): string
+    function datetimeBlade($variables): string
     {
-        return "<?php echo datetime_format({$value}); ?>";
+        return "<?php echo datetime_format({$variables}); ?>";
     }
 }
 
 if (!function_exists('datetime_format')) {
-    function datetime_format($datetime = null, $format = 'Y-m-d H:i:s', $tz = null)
+    function datetime_format($datetime = null, $format = 'Y-m-d H:i:s', $tz = null): string
     {
         if ($tz === null) $tz = config('app.timezone');
         if ($datetime === null) {
@@ -164,16 +167,30 @@ if (!function_exists('datetime_format')) {
     }
 }
 
+if (!function_exists('notEmptyBlade')) {
+    function notEmptyBlade($variable): string
+    {
+        return "<?php if(!empty({$variable})) { ?>";
+    }
+}
+
+if (!function_exists('endNotEmptyBlade')) {
+    function endNotEmptyBlade(): string
+    {
+        return "<?php } ?>";
+    }
+}
+
 if (!function_exists('name2Title')) {
     function name2Title($name): string
     {
         $title = str_replace(['-', '_'], ' ', $name);
-        return \Str::title($title);
+        return Str::title($title);
     }
 }
 
 if (!function_exists('encodeNumber')) {
-    function encodeNumber($id, $type = 'lower')
+    function encodeNumber($id, $type = 'lower'): string
     {
         $charset = [
             'lower' => env('BASE_LOWER', 'abcdefghijklmnpqrstuvwxyz0123456789'),
@@ -197,7 +214,7 @@ if (!function_exists('encodeNumber')) {
     }
 }
 if (!function_exists('decodeNumber')) {
-    function decodeNumber($encoded, $type = 'lower')
+    function decodeNumber($encoded, $type = 'lower'): int
     {
         $charset = [
             'lower' => env('BASE_LOWER', 'abcdefghijklmnpqrstuvwxyz0123456789'),
@@ -220,14 +237,14 @@ if (!function_exists('decodeNumber')) {
     }
 }
 if (!function_exists('is_true')) {
-    function is_true($val, $return_null=false)
+    function is_true($val, $return_null=false): bool
     {
         $boolval = ( is_string($val) ? filter_var($val, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) : (bool) $val );
         return ( $boolval===null && !$return_null ? false : $boolval );
     }
 }
 if (!function_exists('kilo_format')) {
-    function kilo_format($number, $symbol = 'K', $decimal_separator = ',')
+    function kilo_format($number, $symbol = 'K', $decimal_separator = ','): string
     {
         if ($number < 1000) {
             return number_format($number, 0, $decimal_separator);

@@ -1,96 +1,117 @@
 <?php
 
-namespace App\View\Components\Forms;
+namespace App\View\Components\Employee;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Checkbox extends Component
+class Select2 extends Component
 {
 
     /**
-     * The Checkbox name.
+     * The Select2 name.
      *
      * @var string
      */
     public $name;
 
     /**
-     * The Checkbox value.
+     * The Select2 value.
      *
      * @var string
      */
     public $value;
 
     /**
-     * The Checkbox prefixId.
+     * The Select2 prefixId.
      *
      * @var string
      */
     public $prefixId;
 
     /**
-     * The Checkbox layout.
+     * The Select2 layout.
      *
      * @var string
      */
     public $layout;
 
     /**
-     * The Checkbox containerClass.
+     * The Select2 containerClass.
      *
      * @var string
      */
     public $containerClass;
 
     /**
-     * The Checkbox title.
+     * The Select2 title.
      *
      * @var string
      */
     public $title;
 
     /**
-     * The Checkbox col.
+     * The Select2 col.
      *
      * @var array
      */
     public $col;
 
     /**
-     * The Checkbox disabled.
+     * The Select2 disabled.
      *
      * @var boolean
      */
     public $disabled;
 
     /**
-     * The Checkbox multiple.
+     * The Select2 multiple.
      *
      * @var boolean
      */
     public $multiple;
 
     /**
-     * The Checkbox class.
+     * The Select2 default.
+     *
+     * @var string
+     */
+    public $default;
+
+    /**
+     * The Select2 class.
      *
      * @var string
      */
     public $class;
 
     /**
-     * The Checkbox datas.
+     * The Select2 placeholder.
      *
-     * @var array
+     * @var string
      */
-    public $datas;
+    public $placeholder;
 
     /**
-     * The Checkbox fill.
+     * The Select2 wrap.
+     *
+     * @var string
+     */
+    public $wrap;
+
+    /**
+     * The Select2 fill.
      *
      * @var array
      */
     public $fill;
+
+    /**
+     * The Select2 role.
+     *
+     * @var mixed
+     */
+    public $role;
 
     /**
      * Create a new component instance.
@@ -101,27 +122,33 @@ class Checkbox extends Component
         $name = null,
         $title = null,
         $value = null,
+        $placeholder = null,
         $prefixId = 'input',
         $containerClass = 'mb-2',
+        $wrap = '<div class="position-relative"></div>',
         $class = null,
-        $datas = null,
         $layout = 'vertical',
         $col = [3,9],
         $fill = null,
         $disabled = false,
-        $multiple = false
+        $multiple = false,
+        $default = null,
+        $role = []
     )
     {
         $this->name = $fill['name']??$name;
         $this->title = $fill['title']??($title??name2Title($this->name));
         $this->layout = $fill['layout']??$layout;
+        $this->placeholder = $fill['placeholder']??$placeholder;
+        $this->wrap = $fill['wrap']??$wrap;
         $this->value = $fill['value']??$value;
         $this->prefixId = $fill['prefixId']??$prefixId;
         $this->containerClass = $fill['containerClass']??$containerClass;
         $this->disabled = $fill['disabled']??$disabled;
         $this->multiple = $fill['multiple']??$multiple;
+        $this->default = $fill['default']??$default;
         $this->class = $fill['class']??$class;
-        $this->datas = $fill['datas']??$datas;
+        $this->role = $fill['role']??$role;
         if ($this->layout == 'horizontal') {
             $this->containerClass .= ' row';
             if (isset($fill['col'])) {
@@ -138,6 +165,6 @@ class Checkbox extends Component
      */
     public function render(): View
     {
-        return view('components.forms.checkbox');
+        return view('components.employee.select2');
     }
 }

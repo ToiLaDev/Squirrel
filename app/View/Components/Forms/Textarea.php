@@ -95,6 +95,13 @@ class Textarea extends Component
     public $datas;
 
     /**
+     * The Textarea fill.
+     *
+     * @var array
+     */
+    public $fill;
+
+    /**
      * Create a new component instance.
      *
      * @return void
