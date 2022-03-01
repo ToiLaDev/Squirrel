@@ -24,7 +24,7 @@
     @isset($action)
     action="{{$action}}"
     @endisset
-    method="{{$method}}"
+    method="{{ $method=='GET'?'GET':'POST' }}"
 >
     @if(in_array($method, ['POST', 'PUT', 'DELETE']))
     @csrf

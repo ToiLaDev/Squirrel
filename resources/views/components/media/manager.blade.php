@@ -176,11 +176,11 @@
                                 if(files[currentFile]) {
                                     delete files[currentFile];
                                     fileCount --;
-                                    $(selectorNames.mediaSectionTitle).last().html(`${fileCount} Files`);
+                                    $(selectorNames.mediaSectionTitle).last().html(`${fileCount} {{__('Files')}}`);
                                 } else {
                                     delete folders[currentFile];
                                     folderCount --;
-                                    $(selectorNames.mediaSectionTitle).first().html(`${folderCount} Folders`);
+                                    $(selectorNames.mediaSectionTitle).first().html(`${folderCount} {{__('Folders')}}`);
                                 }
                                 $(`.media-item[data-id=${currentFile}]`).remove();
                             });
@@ -266,8 +266,8 @@
                     $viewContainer.show();
                     folderCount = response.data.folder?response.data.folder.length:0;
                     fileCount = response.data.file?response.data.file.length:0;
-                    $(selectorNames.mediaSectionTitle).first().html(`${folderCount} Folders`);
-                    $(selectorNames.mediaSectionTitle).last().html(`${fileCount} Files`);
+                    $(selectorNames.mediaSectionTitle).first().html(`${folderCount} {{__('Folders')}}`);
+                    $(selectorNames.mediaSectionTitle).last().html(`${fileCount} {{__('Files')}}`);
                     if (response.data.folder) {
                         $.each(response.data.folder, function (index, folder) {
                             folders[folder.id] = folder;

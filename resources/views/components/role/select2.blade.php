@@ -12,6 +12,7 @@
     :col="$col"
     :fill="$fill"
     :disabled="$disabled"
+    :datas="$datas"
     :multiple="$multiple"
     :options="$roleService->toSelect()"
 />

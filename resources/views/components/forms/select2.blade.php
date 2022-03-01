@@ -6,7 +6,7 @@
             $('#{{$prefixId}}-{{$name}}').wrap('{!! $wrap !!}').select2({
                 @notEmpty($remote)
                 ajax: {
-                    url: '{{ $remote }}',
+                    url: '{!! $remote !!}',
                     dataType: 'json',
                     delay: {{ $remoteDelay }},
                     data: function (params) {
@@ -101,27 +101,27 @@
             @endif
         >
                 @if($slot->isEmpty())
-                    @empty($remote)
-                        @isset($default)
-                            <option value="">{{ __($default) }}</option>
-                        @endisset
-                        @foreach($options as $option)
-                            @php
-                                if (is_string($option)) {
-                                    $option = [
-                                        'title' => ucfirst($option),
-                                        'value' => $option
-                                    ];
-                                }
-                            @endphp
-                            <option
-                                value="{{$option['value']}}"
-                                @if($multiple?in_array($option['value'], (array)$value):$value === $option['value'])
-                                    selected
-                                @endif
-                            >{{$option['title']}}</option>
-                        @endforeach
-                    @endempty
+                    @isset($default)
+                        <option value="">{{ __($default) }}</option>
+                    @endisset
+                    @notEmpty($options)
+                    @foreach($options as $option)
+                        @php
+                            if (is_string($option)) {
+                                $option = [
+                                    'title' => ucfirst($option),
+                                    'value' => $option
+                                ];
+                            }
+                        @endphp
+                        <option
+                            value="{{$option['value']}}"
+                            @if($multiple?in_array($option['value'], (array)$value):$value === $option['value'])
+                                selected
+                            @endif
+                        >{{$option['title']}}</option>
+                    @endforeach
+                    @endNotEmpty
                 @else
                     {!! $slot !!}
                 @endif

@@ -114,6 +114,20 @@ class Select2 extends Component
     public $role;
 
     /**
+     * The Select2 datas.
+     *
+     * @var array
+     */
+    public $datas;
+
+    /**
+     * The Select2 options.
+     *
+     * @var array
+     */
+    public $options;
+
+    /**
      * Create a new component instance.
      *
      * @return void
@@ -128,8 +142,10 @@ class Select2 extends Component
         $wrap = '<div class="position-relative"></div>',
         $class = null,
         $layout = 'vertical',
+        $datas = null,
         $col = [3,9],
         $fill = null,
+        $options = null,
         $disabled = false,
         $multiple = false,
         $default = null,
@@ -142,6 +158,7 @@ class Select2 extends Component
         $this->placeholder = $fill['placeholder']??$placeholder;
         $this->wrap = $fill['wrap']??$wrap;
         $this->value = $fill['value']??$value;
+        $this->options = $fill['options']??$options;
         $this->prefixId = $fill['prefixId']??$prefixId;
         $this->containerClass = $fill['containerClass']??$containerClass;
         $this->disabled = $fill['disabled']??$disabled;
@@ -149,6 +166,7 @@ class Select2 extends Component
         $this->default = $fill['default']??$default;
         $this->class = $fill['class']??$class;
         $this->role = $fill['role']??$role;
+        $this->datas = $fill['datas']??$datas;
         if ($this->layout == 'horizontal') {
             $this->containerClass .= ' row';
             if (isset($fill['col'])) {

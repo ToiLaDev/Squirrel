@@ -11,7 +11,7 @@
     <button
         class="item-view btn btn-sm btn-icon btn-flat-primary"
         @isset($url)
-        data-url="{{$url}}"
+        data-url="{{$url}}/{{$id}}"
         @endisset
         data-toggle="tooltip" title="{{ __('View') }}"
     >
@@ -22,7 +22,7 @@
     <button
         class="item-edit btn btn-sm btn-icon btn-flat-success"
         @isset($url)
-        data-url="{{$url}}/edit"
+        data-url="{{$url}}/{{$id}}/edit"
         @endisset
         data-toggle="tooltip" title="{{ __('Edit') }}"
     >

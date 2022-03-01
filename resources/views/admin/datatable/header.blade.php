@@ -31,9 +31,17 @@
                 window.LaravelDataTables["{{ $dataTableId }}"].draw();
             });
             $('.dt_adv_search').on('reset', function (event) {
+                $('.select2').val(null).trigger("change");
                 window.LaravelDataTables["{{ $dataTableId }}"].columns().search('').draw();
             });
         });
     </script>
     @endisset
+@endpush
+@push('page-styles')
+    <style>
+        /*.dataTable th {*/
+        /*    white-space: nowrap;*/
+        /*}*/
+    </style>
 @endpush
