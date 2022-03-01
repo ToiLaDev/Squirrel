@@ -13,6 +13,7 @@ class BaseDataTable extends DataTable
 
     protected $filters = [];
     protected $order = [];
+    protected $filterColumn = [];
 
     /**
      * Build DataTable class.
@@ -33,6 +34,12 @@ class BaseDataTable extends DataTable
                 $datatables = $datatables->addColumn($name, is_array($column)?$this->rawFormat($name, $column):$column);
             }
             $datatables = $datatables->rawColumns(array_keys($rawColumns));
+        }
+
+        if (!empty($this->filterColumn)) {
+            foreach ($this->filterColumn as $name => $function) {
+                $datatables = $datatables->filterColumn($name, [$this, $function]);
+            }
         }
 
         return $datatables;
@@ -147,7 +154,7 @@ class BaseDataTable extends DataTable
     {
         $columns = [];
         $index = 0;
-        foreach ($this->columns as $name => $column) {
+        foreach ($this->columns() as $name => $column) {
             if (isset($column['raw']['type']) && in_array($column['raw']['type'], ['action', 'acast'])) {
                 if (empty($column['width'])) {
                     $column['width'] = 80;
@@ -155,6 +162,7 @@ class BaseDataTable extends DataTable
                 if (empty($column['addClass'])) {
                     $column['addClass'] = 'text-center';
                 }
+                $column['search'] = false;
             }
 
             $col = Column::make($name);
@@ -195,11 +203,11 @@ class BaseDataTable extends DataTable
                 if (is_string($column['filter'])) {
                     $filter['type'] = $column['filter'];
                 } elseif(is_array($column['filter'])) {
-                    $filter = array_merge($column['filter'], $filter);
+                    $filter = array_merge($filter, $column['filter']);
                 }
 
                 if (empty($filter['title'])) {
-                    $filter['title'] = __($column['title']);
+                    $filter['title'] = $column['title'];
                 }
 
                 $this->filters[$name] = $filter;
@@ -233,9 +241,12 @@ class BaseDataTable extends DataTable
     protected function rawColumns() {
         $columns = [];
 
-        foreach ($this->columns as $name => $column) {
+        foreach ($this->columns() as $name => $column) {
             if (isset($column['raw'])) {
                 $columns[$column['data']??"_{$name}"] = is_array($column['raw'])?array_merge(['name'=>$name], $column['raw']):$column['raw'];
+            }
+            if (isset($column['filter']) && isset($column['filter']['function'])) {
+                $this->filterColumn[$name] = $column['filter']['function'];
             }
         }
 
@@ -279,7 +290,18 @@ class BaseDataTable extends DataTable
                 $return = "<div class=\"ratio ratio-16x9\"><div class=\"bg-cover rounded\" style=\"background-image: url('{{ {$rawName} }}')\"></div></div>";
                 break;
             case 'action':
-                $return = "Admin::datatable.action";
+                $return = function($model) use ($data) {
+                    return view("Admin::datatable.action", array_merge(
+                        [
+                            'model' => $model,
+                            'hide' => $data['hide']??null,
+                            'extend' => $data['extend']??null,
+                            'preview' => $data['preview']??null,
+                            'url' => $data['url']??null,
+                        ],
+                        $model->toArray()
+                    ));
+                };
                 break;
             case 'acast':
                 $return = "Admin::datatable.action-cast";
