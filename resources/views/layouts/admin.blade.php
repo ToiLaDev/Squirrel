@@ -83,6 +83,11 @@
             feather.replace({ width: 14, height: 14 });
         }
         $('body').tooltip({selector: '[data-toggle="tooltip"]'});
+        $('body').popover({
+            selector: '[data-bs-toggle="popover"][data-bs-trigger="hover"]',
+            trigger: 'hover',
+            placement: 'top',
+        });
         const fullModal = new bootstrap.Modal(document.getElementById('fullModal'));
 
         $(document).on('click', '#fullModal .modal-content .btn-success', function (e) {
