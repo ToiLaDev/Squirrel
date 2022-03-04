@@ -219,6 +219,16 @@ class Select2 extends Component
             }
             $this->col = is_string($col)?explode(',', $col):$col;
         }
+        if (
+            empty($this->options)
+            && !empty($this->remote)
+            && !empty($this->value)
+        ) {
+            $this->value = (array)$this->value;
+            foreach ($this->value as $item) {
+                $this->options[] = $item;
+            }
+        }
     }
 
     /**

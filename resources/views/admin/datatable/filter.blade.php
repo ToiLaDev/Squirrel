@@ -10,13 +10,13 @@
                     <div class="col-md-6 col-lg-4 col-12">
                         @switch($filter['type'])
                             @case('select')
-                            <x-forms.select :fill="$filter" />
+                            <x-forms.select :fill="$filter" prefixId="filter-input" />
                             @break
                             @case('employee')
-                            <x-employee.select2 :fill="$filter" />
+                            <x-employee.select2 :fill="$filter" prefixId="filter-input" />
                             @break
                             @default
-                            <x-forms.input :fill="$filter" />
+                            <x-forms.input :fill="$filter" prefixId="filter-input" />
                         @endswitch
                     </div>
                 @endforeach

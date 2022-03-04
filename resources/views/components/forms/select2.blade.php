@@ -116,7 +116,7 @@
                         @endphp
                         <option
                             value="{{$option['value']}}"
-                            @if($multiple?in_array($option['value'], (array)$value):$value === $option['value'])
+                            @if($multiple?(in_array($option, (array)$value)||in_array($option['value'], (array)$value)):$value === $option['value'])
                                 selected
                             @endif
                         >{{$option['title']}}</option>
