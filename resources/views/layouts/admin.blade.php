@@ -72,9 +72,8 @@
         </div>
     </div>
 </div>
+@stack('body-end')
 {{-- include default scripts --}}
-<script>
-</script>
 @include('panels.scripts')
 <script type="text/javascript">
     $(function() {
@@ -94,6 +93,7 @@
             $('#fullModal .modal-content').hide();
             $('#fullModal iframe')[0].contentWindow.location.reload(true);
         });
+
         $(document).on('click', '.dataTable .item-actions .btn', function (e) {
             const rowElm = $(this).parents('tr'),
                 itemId = $(this).parents('.item-actions').data('id'),
@@ -148,6 +148,7 @@
             $('#modalPlayer .modal-body').html(`<video width="100%" autoplay controls><source src="${video}" type="video/mp4"></video>`);
             modalPlayer.show();
         });
+
         document.getElementById('modalPlayer').addEventListener('hide.bs.modal', function (event) {
             $('#modalPlayer .modal-body').html('');
         });
@@ -157,14 +158,17 @@
             $('#fullModal .modal-content').html(`<iframe style="width: 100%;height: 100%;" src="https://docs.google.com/gview?url=${document}&embedded=true"></iframe><div style="position: absolute;bottom:10px;right:10px;"><button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">{{ __('Close') }}</button><button type="button" class="btn ms-1 btn-sm btn-success">{{ __('Reload') }}</button></div>`);
             fullModal.show();
         });
+
         document.getElementById('fullModal').addEventListener('show.bs.modal', function (event) {
             $('#fullModal iframe').on('load', function(){
                 $('#fullModal .modal-content').show();
             });
         });
+
         document.getElementById('fullModal').addEventListener('hide.bs.modal', function (event) {
             $('#fullModal .modal-content').html('');
         });
+
         @if (session('toast'))
         showToast({!! json_encode(session('toast')) !!})
         @endif

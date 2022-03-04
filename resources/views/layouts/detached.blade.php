@@ -126,6 +126,7 @@
         <!-- End: Content-->
 {{-- include footer --}}
 @include('panels.footer')
+@stack('body-end')
 {{-- include default scripts --}}
 @include('panels.scripts')
 <script type="text/javascript">
