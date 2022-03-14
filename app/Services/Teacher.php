@@ -5,7 +5,7 @@ namespace App\Services;
 
 use Illuminate\Support\Arr;
 
-class Squirrel
+class Teacher
 {
     protected $app;
     protected $currentRouteName;

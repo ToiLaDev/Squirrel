@@ -24,6 +24,7 @@
         "toiladev/squirrel-menu": "dev-main",
         "toiladev/squirrel-page": "dev-main",
         "toiladev/squirrel-landt": "dev-main",
+        "toiladev/ispeak-teacher": "dev-main",
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
@@ -90,6 +91,7 @@
         { "type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-1vs1.git" },
         { "type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-1vs3.git" },
         { "type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-OpenClass.git" },
-        { "type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-landt" }
+        { "type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-landt" },
+        { "type": "vcs", "url": "https://github.com/ToiLaDev/ispeak-teacher.git" }
     ]
 }

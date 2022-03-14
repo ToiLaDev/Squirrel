@@ -1,0 +1,22 @@
+{
+    "name": "toiladev/ispeak-teacher",
+    "description": "Teacher for Squirrel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Đỗ Lan",
+        "email": "lan14021999@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Squirrel\\Teacher\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Squirrel\\Teacher\\ServiceProvider"
+            ]
+        }
+    }
+}
