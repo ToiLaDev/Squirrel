@@ -15,14 +15,8 @@
         "laravel/ui": "^3.4",
         "spatie/laravel-permission": "^5.4",
         "toiladev/flysystem-backblaze": "^1.0",
-        "toiladev/ispeak-1vs1": "dev-main",
-        "toiladev/ispeak-1vs3": "dev-main",
-        "toiladev/ispeak-lms": "dev-main",
-        "toiladev/ispeak-openclass": "dev-main",
-        "toiladev/squirrel-blog": "dev-main",
-        "toiladev/squirrel-comment": "dev-main",
-        "toiladev/squirrel-menu": "dev-main",
         "toiladev/squirrel-page": "dev-main",
+        "toiladev/ispeak-student": "dev-main",
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
@@ -81,13 +75,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-menu.git"},
         {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-page.git"},
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-blog.git"},
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/squirrel-comment.git"},
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-LMS.git"},
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-1vs1.git"},
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-1vs3.git"},
-        {"type": "vcs", "url": "https://github.com/ToiLaDev/iSpeak-OpenClass.git"}
+        {"type": "vcs", "url": "https://github.com/ToiLaDev/ispeak-student.git"}
     ]
 }
